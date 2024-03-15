@@ -7,8 +7,8 @@ import useGetUserRole from "../../hooks/useGetUserRole";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-const superAdmin = useGetUserRole()
-// console.log(superAdmin)
+  const superAdmin = useGetUserRole();
+  // console.log(superAdmin)
   // let user = true;
   const admin = superAdmin === "Super_Admin";
   const admin0 = superAdmin === "Admin";
@@ -142,7 +142,7 @@ const superAdmin = useGetUserRole()
                   <img
                     src={user?.photoURL}
                     className="h-[35px] md:h-[40px] w-[35] md:w-[40px] rounded-full"
-                    alt={user?.displayName ? user?.displayName : "Not Found"}
+                    alt={user?.name ? user?.name : "Not Found"}
                   />
                 </figure>
                 <ul
@@ -151,9 +151,7 @@ const superAdmin = useGetUserRole()
                 >
                   <li>
                     <a className="text-[#fff]">
-                      {user?.displayName
-                        ? user?.displayName
-                        : "No name available"}
+                      {user?.name ? user?.name : "No name available"}
                     </a>
                   </li>
                   <li>

@@ -2,27 +2,34 @@
 import { createContext, useState } from "react";
 
 // import {
-  // createUserWithEmailAndPassword,
-  // getAuth,
-  // onAuthStateChanged,
-  // signInWithEmailAndPassword,
-  // signOut,
-  // updateProfile,
+// createUserWithEmailAndPassword,
+// getAuth,
+// onAuthStateChanged,
+// signInWithEmailAndPassword,
+// signOut,
+// updateProfile,
 // } from "firebase/auth";
 // import app from "../firebase.config";
 
-export const AuthContext = createContext(null);
+export const AuthContext = createContext();
 
 // const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
   // eslint-disable-next-line no-unused-vars
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({
+    _id: "",
+    name: "",
+    email: "",
+    password: "",
+    photo: "",
+    role: "",
+  });
   // const [loading, setLoading] = useState(true);
 
   //   const updateTheProfile = (name, picture) => {
   //     return updateProfile(auth.currentUser, {
-  //       displayName: name,
+  //       name: name,
   //       photoURL: picture,
   //     });
   //   };
@@ -32,13 +39,28 @@ const AuthProvider = ({ children }) => {
   //     return signInWithEmailAndPassword(auth, email, password);
   //   };
 
-  const signInUser = (user) => {
-    setUser(user);
+  const signInUser = (userLogdIn) => {
+    console.log(userLogdIn);
+    setUser({
+      _id: userLogdIn._id,
+      name: userLogdIn.name,
+      email: userLogdIn.email,
+      password: userLogdIn.password,
+      photo: userLogdIn.photo,
+      role: userLogdIn.role,
+    });
   };
+  console.log(user);
 
   // const logOut = () => {
-  //   setLoading(true);
-  //   return signOut(auth);
+  //   setUser({
+  //     _id: "",
+  //     name: "",
+  //     email: "",
+  //     password: "",
+  //     photo: "",
+  //     role: "",
+  //   });
   // };
 
   //   useEffect(() => {

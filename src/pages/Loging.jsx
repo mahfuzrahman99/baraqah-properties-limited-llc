@@ -4,39 +4,50 @@ import Swal from "sweetalert2";
 import loginImg from "../assets/login.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-import useAxiosPublic from "../hooks/useAxiosPublic";
+import axios from "axios";
 
 const Login = () => {
   const { signInUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
-  const axiosPublic = useAxiosPublic();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const user = {
+    const userCredentials = {
       email: email,
       password: password,
     };
+    // console.log(test)
 
-    const result = await axiosPublic.get("/login", user);
-
-    console.log( result)
-    signInUser(result);
-    if (result._id) {
+    try {
+      const res = await axios.post("http://localhost:5000/login", userCredentials);
+      console.log(res.data);
+      
+      // Assuming signInUser is a function that sets the user context
+      signInUser(res.data); // You might need to adjust this depending on what your backend returns and what signInUser expects
+      
+      // This checks if login was successful; adjust according to your backend response structure
+      if (res.data && res.data._id) {
+        Swal.fire({
+          position: "top",
+          icon: "success",
+          title: "Login successfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate("/");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      // Handle login failure, e.g., showing an error message
       Swal.fire({
-        position: "top",
-        icon: "success",
-        title: "Login successfully",
-        showConfirmButton: false,
-        timer: 1500,
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Failed to login!',
       });
-      navigate("/");
     }
   };
-
   console.log(user);
 
   return (
