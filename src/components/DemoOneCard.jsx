@@ -3,7 +3,6 @@
 import { PhotoView } from "react-photo-view";
 
 const DemoOneCard = ({ demo }) => {
-  // console.log(demo);
   const {
     demo_Name,
     demo_before_image,
@@ -30,7 +29,7 @@ const DemoOneCard = ({ demo }) => {
               src={demo_before_image}
               data-aos="fade-up"
               data-aos-delay="50"
-              data-aos-duration="3000"
+              data-aos-duration="1000"
               className="md:w-4/5 w-full hidden md:block absolute top-[70%] -right-[10%] shadow-2xl border-8 border-white rounded-lg"
               alt=""
             />
@@ -41,7 +40,7 @@ const DemoOneCard = ({ demo }) => {
         className="space-y-3 md:w-[450px] md:ml-10"
         data-aos="zoom-in"
         data-aos-delay="50"
-        data-aos-duration="3000"
+        data-aos-duration="1000"
       >
         <h1 className="text-xl md:text-4xl font-bold">{demo_Name}</h1>
         <h1 className="text-base font-normal text-justify">

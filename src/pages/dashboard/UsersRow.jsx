@@ -9,9 +9,7 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const UsersRow = ({ user, i, handleRemove, refetch}) => {
   const { user: user1 } = useContext(AuthContext);
-  // console.log(user?.role)
   const axiosPublic = useAxiosPublic();
-  // console.log(user._id)
   const handleUpdateUserRole = async (event) => {
     const role = event.target.innerText;
     
@@ -52,10 +50,10 @@ const UsersRow = ({ user, i, handleRemove, refetch}) => {
       <tr className="bg-gray-100">
         <td className="py-2 px-4 border-b-4">{i + 1}</td>
         <td className="py-2 px-4 border-b-4">
-          <PhotoView src={user?.photo || user1?.photoURL}>
+          <PhotoView src={user?.photoURL || user1?.photoURL}>
             <img
               className="h-12 rounded shadow-lg"
-              src={user?.photo || user1?.photoURL}
+              src={user?.photoURL || user1?.photoURL}
               alt={user?.name}
             />
           </PhotoView>

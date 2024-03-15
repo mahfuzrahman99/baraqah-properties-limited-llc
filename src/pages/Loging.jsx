@@ -4,11 +4,12 @@ import Swal from "sweetalert2";
 import loginImg from "../assets/login.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-import axios from "axios";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const Login = () => {
-  const { signInUser, user } = useContext(AuthContext);
+  const { signInUser } = useContext(AuthContext);
   const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +22,7 @@ const Login = () => {
     // console.log(test)
 
     try {
-      const res = await axios.post("http://localhost:5000/login", userCredentials);
+      const res = await axiosPublic.post("/login", userCredentials);
       console.log(res.data);
       
       // Assuming signInUser is a function that sets the user context
@@ -48,7 +49,6 @@ const Login = () => {
       });
     }
   };
-  console.log(user);
 
   return (
     <div
@@ -89,7 +89,7 @@ const Login = () => {
           <div className="flex justify-center w-2/4 mx-auto mt-2 col-span-2">
             <button
               type="submit"
-              className="btn btn-ghost bg-white p-2 rounded-md w-full text-xl font-bold uppercase text-[#00938a] hover:text-white"
+              className="btn btn-ghost bg-white p-2 rounded-md w-full text-xl font-bold uppercase text-[#a9a3cf] hover:text-white"
             >
               Login
             </button>

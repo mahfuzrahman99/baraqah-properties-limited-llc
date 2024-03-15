@@ -1,15 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/exhaustive-deps */
-// import { useContext } from "react";
-// import Swal from "sweetalert2";
-// import registerImg from "../assets/register.jpg";
 import swal from "sweetalert";
-// import { AuthContext } from "../providers/AuthProvider";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=bb5a16f772589f5febc04c57a62be37d`;
 
 const Register = ({ showModal, setShowModal }) => {
-  // const { createUser, updateTheProfile } = useContext(AuthContext);
   const axiosPublic = useAxiosPublic();
 
   // console.log(createUser);
@@ -17,40 +12,28 @@ const Register = ({ showModal, setShowModal }) => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("image", e.target.photo.files[0]);
+    formData.append("image", e.target.photoURL.files[0]);
 
     const res = await axiosPublic.post(image_hosting_api, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
     });
-    // console.log(res.data.data.display_url)
 
     if (res.data.success) {
-      const photo = res.data.data.display_url;
+      const photoURL = res.data.data.display_url;
       const name = e.target.name.value;
       const email = e.target.email.value;
       const password = e.target.password.value;
-      const userInfo = { name, email, password, photo, role: "Admin" };
-      // console.log(userInfo);
+      const userInfo = { name, email, password, photoURL, role: "Admin" };
 
       if (/^(?=.*[A-Z])(?=.*[\W_]).{6,}$/.test(password)) {
-        // create user
-        // createUser(email, password)
-        // .then(() => {
-        //   updateTheProfile(name, photo)
-        //     .then(() => {
               axiosPublic.post("/users", userInfo).then((res) => {
                 if (res.data.insertedId) {
                   e.target.reset();
                   swal("Success!", "Registration Successfully!", "success");
                 }
               });
-            // })
-            // .catch((err) => {
-            //   console.log(err);
-            // });
-        // })
       } else {
         swal(
           "Error",
@@ -126,7 +109,7 @@ const Register = ({ showModal, setShowModal }) => {
                   </label>
                   <input
                     type="file"
-                    name="photo"
+                    name="photoURL"
                     accept="image/*"
                     className="p-2 rounded-md bg-white text-black outline-none w-full"
                   />

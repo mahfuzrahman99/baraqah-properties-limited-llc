@@ -9,7 +9,6 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 import UpdateDemo from "./UpdateDemo";
 
 const AllDemosRow = ({ demo, i, refetch }) => {
-  console.log(demo);
   const axiosPublic = useAxiosPublic();
   const [showModal, setShowModal] = useState(false);
   const {
@@ -21,7 +20,6 @@ const AllDemosRow = ({ demo, i, refetch }) => {
   } = demo || {};
 
   const handleDelete = async (id, demo) => {
-    console.log(demo);
     const confirmed = await Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to delete this!",
@@ -55,7 +53,6 @@ const AllDemosRow = ({ demo, i, refetch }) => {
       }
     }
   };
-  // console.log(project.image)
   return (
     <>
       <tr className="bg-gray-100 text-xs text-black font-semibold">

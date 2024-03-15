@@ -3,13 +3,10 @@ import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import useGetUserRole from "../../hooks/useGetUserRole";
-// import navLogo from "../../assets/logo.png";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const superAdmin = useGetUserRole();
-  // console.log(superAdmin)
-  // let user = true;
   const admin = superAdmin === "Super_Admin";
   const admin0 = superAdmin === "Admin";
   const navigate = useNavigate();
@@ -82,10 +79,7 @@ const Navbar = () => {
   );
   const handleLogout = () => {
     logOut()
-      .then(() => {
-        navigate("/");
-      })
-      .catch(() => {});
+    navigate("/login");
   };
 
   return (

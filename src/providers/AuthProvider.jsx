@@ -1,91 +1,51 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
-
-// import {
-// createUserWithEmailAndPassword,
-// getAuth,
-// onAuthStateChanged,
-// signInWithEmailAndPassword,
-// signOut,
-// updateProfile,
-// } from "firebase/auth";
-// import app from "../firebase.config";
+import { createContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext();
 
-// const auth = getAuth(app);
-
 const AuthProvider = ({ children }) => {
-  // eslint-disable-next-line no-unused-vars
-  const [user, setUser] = useState({
-    _id: "",
-    name: "",
-    email: "",
-    password: "",
-    photo: "",
-    role: "",
+  const [user, setUser] = useState(() => {
+    // Browser reload korle local storage theke user info retrieve kora
+    const storedUser = localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser) : {
+      _id: "",
+      name: "",
+      email: "",
+      password: "",
+      photoURL: "",
+      role: "",
+    };
   });
-  // const [loading, setLoading] = useState(true);
 
-  //   const updateTheProfile = (name, picture) => {
-  //     return updateProfile(auth.currentUser, {
-  //       name: name,
-  //       photoURL: picture,
-  //     });
-  //   };
-
-  //   const signInUser = (email, password) => {
-  //     setLoading(true);
-  //     return signInWithEmailAndPassword(auth, email, password);
-  //   };
-
-  const signInUser = (userLogdIn) => {
-    console.log(userLogdIn);
-    setUser({
-      _id: userLogdIn._id,
-      name: userLogdIn.name,
-      email: userLogdIn.email,
-      password: userLogdIn.password,
-      photo: userLogdIn.photo,
-      role: userLogdIn.role,
-    });
+  const signInUser = (userLoggedIn) => {
+    setUser(userLoggedIn);
+    // Local storage e user info store kora
+    localStorage.setItem("user", JSON.stringify(userLoggedIn));
   };
-  console.log(user);
 
-  // const logOut = () => {
-  //   setUser({
-  //     _id: "",
-  //     name: "",
-  //     email: "",
-  //     password: "",
-  //     photo: "",
-  //     role: "",
-  //   });
-  // };
+  const logOut = () => {
+    setUser({
+      _id: "",
+      name: "",
+      email: "",
+      password: "",
+      photoURL: "",
+      role: "",
+    });
+    // Local storage e user info clear kora
+    localStorage.removeItem("user");
+  };
 
-  //   useEffect(() => {
-  //     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-  //       setUser(currentUser);
-  //       setLoading(false);
-  //     });
-  //     return () => {
-  //       unSubscribe();
-  //     };
-  //   },);
-
-  //   useEffect(() => {
-  //     if (user) {
-  //       setLoading(false);
-  //     }
-  //   }, [user]);
+  // useEffect hook use kora hoise user er state change track korar jonno
+  useEffect(() => {
+    // Local storage e user info store kora
+    localStorage.setItem("user", JSON.stringify(user));
+  }, [user]);
 
   const authInfo = {
     user,
-    // loading,
-    // createUser,
     signInUser,
-    // logOut,
-    // updateTheProfile,
+    logOut,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
