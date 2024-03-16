@@ -4,11 +4,11 @@ import techSphere from "../../../public/TechSphere.json";
 const WhyCoosUs = () => {
   return (
     <div>
-      <div className="mt-16">
-        <h1 className="text-center text-4xl font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent">
+      <div className="mt-16 px-2 md:px-0">
+        <h1 className="text-center text-xl md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent">
           Why Choose Baraqa Properties?
         </h1>
-        <p className="text-center font-medium mt-3">
+        <p className="text-center text-xs md:text-base font-medium mt-3">
           At Baraqa Properties, we&apos;re more than just a gardening company –
           we&apos;re your partners in creating
           <br /> the outdoor paradise you&apos;ve always envisioned. Here&apos;s

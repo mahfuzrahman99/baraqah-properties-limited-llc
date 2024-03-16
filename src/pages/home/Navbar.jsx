@@ -113,7 +113,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm absolute dropdown-content mt-3 z-[50] p-2 shadow bg-[#311A36] bg-opacity-60 rounded-md w-52 "
+            className="menu menu-sm absolute dropdown-content mt-3 z-[50] p-2 shadow bg-[#0B0633] bg-opacity-60 rounded-md w-52 text-[#fff]"
           >
             {navLinks}
           </ul>
@@ -135,7 +135,7 @@ const Navbar = () => {
                 <figure tabIndex={0}>
                   <img
                     src={user?.photoURL}
-                    className="h-[35px] md:h-[40px] w-[35] md:w-[40px] rounded-full"
+                    className="h-[35px] md:h-[40px] w-[40px] rounded-full"
                     alt={user?.name ? user?.name : "Not Found"}
                   />
                 </figure>
@@ -164,10 +164,10 @@ const Navbar = () => {
           ) : (
             ""
           )}
-          <label
+          {/* <label
             tabIndex={0}
             className="btn btn-outline btn-circle border-none hover:bg-transparent avatar"
-          ></label>
+          ></label> */}
         </div>
       </div>
     </div>

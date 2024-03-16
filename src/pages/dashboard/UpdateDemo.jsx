@@ -137,7 +137,7 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                   {/* DEMO DESCRIPTION */}
                   <div className="mb-4 col-span-2">
                     <label className="block  bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent text-xs font-bold">
-                      DEMO DESCRIPTION:
+                      Demo Description:
                     </label>
                     <textarea
                       defaultValue={demo_description}
@@ -160,7 +160,7 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                     </label>
                     <div>
                       <img
-                        className="rounded-md h-[170px] w-[340px] mb-2"
+                        className="rounded-md md:h-[170px] md:w-[340px] h-[120px] w-[230px] mb-2"
                         src={demo_before_image}
                         alt=""
                       />
@@ -169,6 +169,7 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                       <input
                         type="file"
                         accept="image/*"
+                        className=" text-xs md:text-base"
                         {...register("demo_before_image", {
                           required: "Camp Image is required",
                         })}
@@ -188,7 +189,7 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                     </label>
                     <div>
                       <img
-                        className="rounded-md h-[170px] w-[340px] mb-2"
+                        className="rounded-md md:h-[170px] md:w-[340px] h-[120px] w-[230px] mb-2"
                         src={demo_after_image}
                         alt=""
                       />
@@ -197,6 +198,7 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                       <input
                         type="file"
                         accept="image/*"
+                        className=" text-xs md:text-base"
                         {...register("demo_after_image", {
                           required: "Camp Image is required",
                         })}
