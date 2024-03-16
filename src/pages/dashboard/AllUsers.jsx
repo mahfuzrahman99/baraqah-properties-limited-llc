@@ -74,7 +74,7 @@ const AllUsers = () => {
                 </tr>
               </thead>
               <tbody>
-                {users.map((user, i) => (
+                {users?.map((user, i) => (
                   <UsersRow
                     key={user._id}
                     handleRemove={handleRemove}

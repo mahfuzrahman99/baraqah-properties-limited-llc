@@ -9,7 +9,7 @@ const useGetUserRole = () => {
   const [userRole, setUSerRole] = useState("");
   const axiosPublic = useAxiosPublic();
   useEffect(() => {
-    if (!isLoading) {
+    if (isLoading) {
       axiosPublic
         .get(`/getUserRole/${email}`)
 

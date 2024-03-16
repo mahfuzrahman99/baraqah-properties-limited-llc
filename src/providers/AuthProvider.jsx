@@ -4,6 +4,7 @@ import { createContext, useState, useEffect } from "react";
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState(() => {
     // Browser reload korle local storage theke user info retrieve kora
     const storedUser = localStorage.getItem("user");
@@ -21,6 +22,7 @@ const AuthProvider = ({ children }) => {
     setUser(userLoggedIn);
     // Local storage e user info store kora
     localStorage.setItem("user", JSON.stringify(userLoggedIn));
+    setIsLoading(false)
   };
 
   const logOut = () => {
@@ -41,10 +43,11 @@ const AuthProvider = ({ children }) => {
     // Local storage e user info store kora
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
-
+  console.log(user);
   const authInfo = {
     user,
     signInUser,
+    isLoading,
     logOut,
   };
   return (

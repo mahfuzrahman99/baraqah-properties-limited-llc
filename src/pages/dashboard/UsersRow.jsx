@@ -52,7 +52,7 @@ const UsersRow = ({ user, i, handleRemove, refetch}) => {
         <td className="py-2 px-4 border-b-4">
           <PhotoView src={user?.photoURL || user1?.photoURL}>
             <img
-              className="h-12 rounded shadow-lg"
+              className="h-12 w-12 rounded shadow-lg"
               src={user?.photoURL || user1?.photoURL}
               alt={user?.name}
             />

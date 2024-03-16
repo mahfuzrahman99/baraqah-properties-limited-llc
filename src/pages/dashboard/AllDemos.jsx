@@ -13,7 +13,7 @@ const AllDemos = () => {
       const enteredSearchValue = e.target.search.value.toLowerCase();
       e.target.reset();
   
-      if (enteredSearchValue.length >= 1) {
+      if (enteredSearchValue?.length >= 1) {
         const filteredDemo = demos?.filter(
           (demo) => demo?.demo_category.toLowerCase().includes(enteredSearchValue)
         );
