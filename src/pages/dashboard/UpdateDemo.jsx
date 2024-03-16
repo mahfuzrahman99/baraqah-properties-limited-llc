@@ -41,7 +41,7 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
         demo_Name: data.demo_Name,
         demo_before_image: res.data.data.display_url,
         demo_after_image: res1.data.data.display_url,
-        demo_description: data.DEMO_DESCRIPTION,
+        demo_description: data.demo_description,
         demo_category: data.demo_category,
       };
       console.log(demoItem);
@@ -117,11 +117,11 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                     >
                       <option value="">Select...</option>
                       <option value="Category 1">Category 1</option>
-                      <option value="Category_2">Category 2</option>
-                      <option value="Category_3">Category 3</option>
-                      <option value="Category_4">Category 4</option>
-                      <option value="Category_5">Category 5</option>
-                      <option value="Category_6">Category 6</option>
+                      <option value="Category 2">Category 2</option>
+                      <option value="Category 3">Category 3</option>
+                      <option value="Category 4">Category 4</option>
+                      <option value="Category 5">Category 5</option>
+                      <option value="Category 6">Category 6</option>
                     </select>
                     {errors.category && (
                       <p className="text-red-500">{errors.category.message}</p>

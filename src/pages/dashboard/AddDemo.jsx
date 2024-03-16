@@ -39,8 +39,8 @@ const AddDemo = ({ showModal, setShowModal }) => {
         demo_Name: data.demo_Name,
         demo_before_image: res.data.data.display_url,
         demo_after_image: res1.data.data.display_url,
-        DEMO_DESCRIPTION: data.DEMO_DESCRIPTION,
-        category: data.category,
+        demo_description: data.demo_description,
+        demo_category: data.demo_category,
       };
       console.log(demoItem);
       const houseRes = await axiosPublic.post("/demos", demoItem);
@@ -94,13 +94,13 @@ const AddDemo = ({ showModal, setShowModal }) => {
                     )}
                   </div>
 
-                  {/* Category Dropdown Select */}
+                  {/* demo_category Dropdown Select */}
                   <div className="mb-4 col-span-1">
                     <label className="block  bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent text-xs font-bold">
                       Select a category:
                     </label>
                     <select
-                      {...register("category", {
+                      {...register("demo_category", {
                         required: "Please select a category",
                       })}
                       className="w-full bg-white p-2 rounded-md mt-1"

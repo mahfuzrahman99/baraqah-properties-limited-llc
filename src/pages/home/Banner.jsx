@@ -14,7 +14,7 @@ const Banner = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="hero-overlay bg-opacity-60 h-[50vh] md:h-[80vh]"></div>
+      <div className="hero-overlay bg-opacity-50 h-[50vh] md:h-[80vh]"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
         <div className="">

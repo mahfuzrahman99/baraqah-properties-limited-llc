@@ -8,32 +8,36 @@ const DemoOneCard = ({ demo }) => {
     demo_before_image,
     demo_after_image,
     demo_description,
-    // demo_category,
+    demo_category,
   } = demo || {};
   return (
     <div className="md:hero md:hero-content gap-2 my-2 px-2 md:mb-8 border-8 rounded-2xl h-[520px] bg-[#A9A3CF] ">
       <div className="">
         <div className="relative">
-          <PhotoView src={demo_after_image}>
-            <img
-              src={demo_after_image}
-              data-aos="fade-down"
-              data-aos-delay="50"
-              data-aos-duration="1000"
-              className="md:w-11/12 md:h-[230px] w-full shadow-2xl rounded-lg"
-              alt=""
-            />
-          </PhotoView>
-          <PhotoView src={demo_before_image}>
-            <img
-              src={demo_before_image}
-              data-aos="fade-up"
-              data-aos-delay="50"
-              data-aos-duration="1000"
-              className="md:w-4/5 w-full hidden md:block absolute top-[70%] -right-[10%] shadow-2xl border-8 border-white rounded-lg"
-              alt=""
-            />
-          </PhotoView>
+          <div className="md:w-11/12">
+            <PhotoView src={demo_after_image}>
+              <img
+                src={demo_after_image}
+                data-aos="fade-down"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                className=" md:h-[230px] md:w-[390px] w-full shadow-2xl rounded-lg"
+                alt=""
+              />
+            </PhotoView>
+          </div>
+          <div className="md:w-4/5">
+            <PhotoView src={demo_before_image}>
+              <img
+                src={demo_before_image}
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                className=" md:h-[190px] md:w-[320px] w-full hidden md:block absolute top-[70%] -right-[10%] shadow-2xl border-8 border-white rounded-lg"
+                alt=""
+              />
+            </PhotoView>
+          </div>
         </div>
       </div>
       <div
@@ -46,6 +50,7 @@ const DemoOneCard = ({ demo }) => {
         <h1 className="text-base font-normal text-justify">
           {demo_description}
         </h1>
+        <h1 className="text-base font-normal text-justify">{demo_category}</h1>
       </div>
     </div>
   );
