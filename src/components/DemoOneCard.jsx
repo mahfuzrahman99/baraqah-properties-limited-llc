@@ -33,7 +33,7 @@ const DemoOneCard = ({ demo }) => {
             <PhotoView src={demo_after_image}>
               <img
                 src={demo_after_image}
-                data-aos={window.innerWidth > 768 ? "" : "fade-down"}
+                data-aos="fade-down"
                 data-aos-delay="50"
                 data-aos-duration="1000"
                 className="md:h-[230px] h-[200px] md:w-[390px] w-[300px] shadow-2xl rounded-lg pt-4 md:pt-auto"
@@ -45,7 +45,7 @@ const DemoOneCard = ({ demo }) => {
             <PhotoView src={demo_before_image}>
               <img
                 src={demo_before_image}
-                data-aos={window.innerWidth > 768 ? "" : "fade-up"}
+                data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="1000"
                 className="md:h-[190px] h-[200px] md:w-[320px] w-[300px] absolute md:top-[70%] md:-right-[10%] shadow-2xl md:border-8 border-white rounded-lg my-2 md:my-auto"
@@ -57,7 +57,7 @@ const DemoOneCard = ({ demo }) => {
       </div>
       <div
         className="space-y-3 md:w-[450px] md:ml-10 mt-[230px] md:mt-auto"
-        data-aos={window.innerWidth > 768 ? "" : "zoom-in"}
+        data-aos="zoom-in"
         data-aos-delay="50"
         data-aos-duration="1000"
       >
