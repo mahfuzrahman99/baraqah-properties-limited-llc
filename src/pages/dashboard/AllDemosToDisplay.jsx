@@ -3,7 +3,7 @@ import AllDemosRow from "./AllDemosRow";
 
 const AllDemosToDisplay = ({ demosToDisplay, refetch }) => {
   // const demosArray = Array.isArray(demosToDisplay) ? demosToDisplay : Object.values(demosToDisplay);
-  
+
   // console.log( demosToDisplay );
   // console.log( typeof(demosToDisplay) );
   return (
@@ -13,11 +13,11 @@ const AllDemosToDisplay = ({ demosToDisplay, refetch }) => {
           Total Demos: {demosToDisplay?.length}
         </h1>
         <div
-          className=" overflow-x-auto md:h-[65vh] overflow-y-auto"
+          className=" overflow-x-auto h-[52vh] md:h-[65vh] overflow-y-auto"
           style={{ scrollbarWidth: "thin", scrollbarColor: "#a9a3cf #f1f1f1" }}
         >
           <table className="min-w-full bg-gray-300">
-            <thead className="rounded-t-xl bg-[#a9a3cf] text-white">
+            <thead className="rounded-t-xl bg-[#a9a3cf] text-white text-xs md:text-base">
               <tr className="rounded-t-xl bg-[#a9a3cf]">
                 <th className="py-2 px-4 border-b">NO</th>
                 <th className="py-2 px-4 border-b">Before image</th>

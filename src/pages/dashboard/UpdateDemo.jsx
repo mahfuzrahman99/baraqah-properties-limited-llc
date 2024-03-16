@@ -3,9 +3,11 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+// import useFetchDemos from "../../hooks/useFetchDemos";
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=bb5a16f772589f5febc04c57a62be37d`;
 
 const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
+  // const [demos] = useFetchDemos();
   const axiosPublic = useAxiosPublic();
   const {
     handleSubmit,
@@ -92,7 +94,7 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                       Project Name:
                     </label>
                     <input
-                      className="w-full bg-white p-2 rounded-md mt-1"
+                      className="w-full bg-white p-2 rounded-md mt-1 outline-none"
                       defaultValue={demo_Name}
                       {...register("demo_Name", {
                         required: "Project Name is required",
@@ -108,23 +110,27 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                     <label className="block  bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent text-xs font-bold">
                       Select a category:
                     </label>
-                    <select
+                    <input
+                      className="w-full bg-white p-2 rounded-md mt-1 outline-none"
+                      defaultValue={demo_category}
+                      {...register("demo_category", {
+                        required: "Project Name is required",
+                      })}
+                    />
+                    {/* <select
                       defaultValue={demo_category}
                       {...register("demo_category", {
                         required: "Please select a category",
                       })}
-                      className="w-full bg-white p-2 rounded-md mt-1"
+                      className="w-full bg-white p-2 rounded-md mt-1 outline-none"
                     >
-                      <option value="">Select...</option>
-                      <option value="Category 1">Category 1</option>
-                      <option value="Category 2">Category 2</option>
-                      <option value="Category 3">Category 3</option>
-                      <option value="Category 4">Category 4</option>
-                      <option value="Category 5">Category 5</option>
-                      <option value="Category 6">Category 6</option>
-                    </select>
-                    {errors.category && (
-                      <p className="text-red-500">{errors.category.message}</p>
+                      <option value="">Select Category...</option>
+                      {demos?.map(demo => (
+                        <option key={demo.demo_category} value={demo.demo_category}>{demo.demo_category}</option>
+                      ))}
+                    </select> */}
+                    {errors.demo_category && (
+                      <p className="text-red-500">{errors.demo_category.message}</p>
                     )}
                   </div>
 
@@ -138,7 +144,7 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                       {...register("demo_description", {
                         required: "Live link URL is required",
                       })}
-                      className="w-full bg-white p-2 rounded-md mt-1"
+                      className="w-full bg-white p-2 rounded-md mt-1 outline-none"
                     />
                     {errors.demo_description && (
                       <p className="text-red-500">
@@ -203,7 +209,7 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                     </div>
                   </div>
                 </div>
-                <div className="w-[100px] mx-auto bg-[#0B0633] rounded">
+                <div className="w-[110px] mx-auto bg-[#0B0633] rounded">
                   <button
                     type="submit"
                     className=" bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent transform duration-1000 font-bold py-2 px-4 rounded "

@@ -99,22 +99,14 @@ const AddDemo = ({ showModal, setShowModal }) => {
                     <label className="block  bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent text-xs font-bold">
                       Select a category:
                     </label>
-                    <select
+                    <input
+                      className="w-full bg-white p-2 rounded-md mt-1 outline-none"
                       {...register("demo_category", {
-                        required: "Please select a category",
+                        required: "Project Name is required",
                       })}
-                      className="w-full bg-white p-2 rounded-md mt-1"
-                    >
-                      <option value="">Select...</option>
-                      <option value="full_stack_based">Full Stack Based</option>
-                      <option value="frontend_based">Frontend Based</option>
-                      <option value="javascript_based">JavaScript Based</option>
-                      <option value="vanilla_css_based">
-                        Vanilla CSS Based
-                      </option>
-                    </select>
-                    {errors.category && (
-                      <p className="text-red-500">{errors.category.message}</p>
+                    />
+                    {errors.demo_category && (
+                      <p className="text-red-500">{errors.demo_category.message}</p>
                     )}
                   </div>
 
@@ -174,7 +166,7 @@ const AddDemo = ({ showModal, setShowModal }) => {
                     )}
                   </div>
                 </div>
-                <div className="w-[100px] mx-auto bg-[#0B0633] rounded">
+                <div className="w-[90px] mx-auto bg-[#0B0633] rounded md:mt-4">
                   <button
                     type="submit"
                     className=" bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent transform duration-1000 font-bold py-2 px-4 rounded "

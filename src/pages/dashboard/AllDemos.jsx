@@ -30,11 +30,11 @@ const AllDemos = () => {
   // console.log( typeof(demos))
   return (
     <>
-      <div className="flex justify-between m-3 md:m-10">
+      <div className="md:flex justify-between m-3 md:m-10">
         <div>
           <button
             onClick={() => setShowModal(true)}
-            className="btn btn-ghost bg-[#a9a3cf] hover:bg-[#311A36] transform duration-1000 text-white p-2 rounded-md"
+            className="btn btn-ghost bg-[#a9a3cf] hover:bg-[#311A36] transform duration-1000 text-white w-full md:w-auto p-2 rounded-md mb-2 md:mb-auto"
           >
             ADD A DEMO
           </button>
@@ -45,7 +45,7 @@ const AllDemos = () => {
             <input
               type="text"
               name="search"
-              className="hover:border-none px-5 join-item outline-none w-[250px]"
+              className="hover:border-none px-5 join-item outline-none w-full md:w-[250px]"
               placeholder="Search a demo by category..."
             />
             <button className="btn join-item rounded-r-md bg-[#a9a3cf] hover:bg-[#311A36] transform duration-1000 text-white p-2">

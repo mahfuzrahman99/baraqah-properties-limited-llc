@@ -59,12 +59,12 @@ const AllDemosRow = ({ demo, i, refetch }) => {
         <td className="py-2 px-4 border-b-4">{i + 1}</td>
         <td className="py-2 px-4 border-b-4">
           <PhotoView src={demo_before_image}>
-            <img className="h-12 rounded shadow-lg" src={demo_before_image} alt={demo_Name} />
+            <img className="md:h-12 h-10 md:w-[80px] rounded shadow-lg" src={demo_before_image} alt={demo_Name} />
           </PhotoView>
         </td>
         <td className="py-2 px-4 border-b-4">
           <PhotoView src={demo_after_image}>
-            <img className="h-12 rounded shadow-lg" src={demo_after_image} alt={demo_Name} />
+            <img className="md:h-12 h-10 md:w-[80px] rounded shadow-lg" src={demo_after_image} alt={demo_Name} />
           </PhotoView>
         </td>
         <td className="py-2 px-4 border-b-4">{demo_Name}</td>
