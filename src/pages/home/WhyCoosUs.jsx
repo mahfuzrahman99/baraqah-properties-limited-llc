@@ -8,15 +8,17 @@ const WhyCoosUs = () => {
         <h1 className="text-center text-xl md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent">
           Why Choose Baraqa Properties?
         </h1>
-        <p className="text-center text-xs md:text-base font-medium mt-3">
-          At Baraqa Properties, we&apos;re more than just a gardening company –
-          we&apos;re your partners in creating
-          <br /> the outdoor paradise you&apos;ve always envisioned. Here&apos;s
-          why you should choose us
+        <p className="text-center text-xs md:text-base font-medium mt-3 max-w-4xl mx-auto">
+          Discover the difference with Baraqa Property Services LLC! From
+          unparalleled quality to unwavering reliability, we&apos;re your
+          trusted partner in property maintenance , where every detail is
+          meticulously cared for with integrity and professionalism. . With our
+          client-focused approach and skilled professionals, we guarantee
+          top-notch care for your property. Choose excellence. Choose Baraqas
         </p>
       </div>
-      <div className="md:grid grid-cols-2 gap-3 max-w-6xl mx-auto mb-16 mt-6 px-3 md:px-0">
-        <div className="col-span-1">
+      <div className="md:grid grid-cols-2 items-center gap-3 max-w-6xl mx-auto mb-16 mt-6 px-3 md:px-0">
+        <div className="col-span-1 ">
           <Lottie
             animationData={techSphere}
             width={350}
@@ -26,36 +28,36 @@ const WhyCoosUs = () => {
         </div>
         <div className="col-span-1 space-y-2 md:mt-7">
           <p>
-            <span className="font-bold">Expertise: </span> Our team comprises
-            seasoned professionals with a wealth of experience in landscaping
-            and garden design.
+            <span className="font-bold">Expertise and Excellence: </span> With
+            years of industry experience and a team of skilled professionals,
+            Baraqa Property Services LLC brings unparalleled expertise to every
+            project. From routine maintenance tasks to complex repairs and
+            renovations, we deliver excellence in every aspect of property
+            maintenance
           </p>
           <p>
-            <span className="font-bold">Personalized Approach: </span>We take
-            the time to understand your unique preferences and tailor our
-            services to bring your vision to life
+            <span className="font-bold">Comprehensive Solutions: </span>
+            Our comprehensive range of services covers all aspects of property
+            maintenance, including plumbing, electrical work, landscaping,
+            walls, roofing, flooring, HVAC maintenance, and more. Whatever your
+            property needs, we have the skills and resources to handle it with
+            precision and efficiency.
           </p>
           <p>
-            <span className="font-bold">Quality Assurance: </span> From the
-            selection of plants to the execution of every detail, we maintain
-            the highest standards of quality craftsmanship.
+            <span className="font-bold">Prompt and Reliable Service </span> At Baraqa, we understand the importance of prompt and reliable service. We prioritize your needs and ensure timely responses to service requests, minimizing downtime and maximizing property value.
+
           </p>
           <p>
-            <span className="font-bold">Customer Satisfaction:</span> Your
-            satisfaction is our priority. We strive to exceed your expectations
-            and ensure that you&apos;re delighted with the results.
+            <span className="font-bold">Quality Craftsmanship:</span> We take pride in our workmanship and are committed to delivering superior results on every project. With attention to detail and a focus on quality, we guarantee long-lasting solutions that exceed expectations.
           </p>
           <p>
-            <span className="font-bold">Creative Solutions:</span> Our team
-            thrives on innovation, offering creative solutions to maximize the
-            potential of your outdoor space and bring fresh ideas to your
-            project.
+            <span className="font-bold">Transparent Communication:</span> Communication is key to our success. We believe in transparent and open communication with our clients, keeping you informed at every stage of the project and ensuring your peace of mind.
           </p>
           <p>
-            <span className="font-bold">Transparent Communication: </span>We
-            believe in open and transparent communication every step of the way.
-            You&apos;ll be kept informed and involved throughout the process,
-            ensuring a smooth and collaborative experience.
+            <span className="font-bold">Customized Approach: </span>We understand that every property is unique, which is why we tailor our services to meet your specific needs and preferences. Whether you require ongoing maintenance or a one-time repair, we work closely with you to develop a customized solution that fits your budget and exceeds your expectations.
+          </p>
+          <p>
+            <span className="font-bold">Customer Satisfaction Guarantee: </span>Your satisfaction is our top priority. We are dedicated to delivering exceptional service and building long-lasting relationships with our clients based on trust, reliability, and integrity.
           </p>
         </div>
       </div>
