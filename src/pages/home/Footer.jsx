@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="hidden md:block"></div>
         </div> */}
         <div className="col-span-2 text-center p-3 font-medium font-inter pt-4">
-          <h1>Copyright © All rights reserved. by <span className="font-Signature font-extrabold text-xl">Baraqa Properties Limited LLC</span></h1>
+          <h1>Copyright © All rights reserved. by <span className="font-Signature font-extrabold text-lg md:text-xl">Baraqa Properties Limited LLC</span></h1>
         </div>
       </div>
       </div>

@@ -15,7 +15,7 @@ const Home = () => {
             <div>
                 <WhyCoosUs/>
             </div>
-            <div className=" my-12">
+            <div className=" my-4 md:my-12">
                 <ContactUs/>
             </div>
             <div>

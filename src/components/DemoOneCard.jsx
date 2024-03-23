@@ -65,7 +65,7 @@ const DemoOneCard = ({ demo }) => {
         <h1 className="text-sm md:text-base font-normal text-justify">
           {demo_description}
         </h1>
-        <h1 className="text-base font-normal text-justify">{demo_category}</h1>
+        <h1 className="text-sm text-justify font-bold">{demo_category}</h1>
       </div>
     </div>
   );

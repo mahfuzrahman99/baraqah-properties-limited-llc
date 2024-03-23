@@ -4,11 +4,11 @@ import techSphere from "../../../public/TechSphere.json";
 const WhyCoosUs = () => {
   return (
     <div>
-      <div className="mt-16 px-2 md:px-0">
+      <div className="md:mt-16 mt-6 px-2 md:px-0">
         <h1 className="text-center text-xl md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent">
           Why Choose Baraqa Properties?
         </h1>
-        <p className="text-center text-xs md:text-base font-medium mt-3 max-w-4xl mx-auto">
+        <p className="md:text-center text-justify text-xs md:text-base font-medium mt-3 max-w-4xl mx-auto px-4 md:px-0 ">
           Discover the difference with Baraqa Property Services LLC! From
           unparalleled quality to unwavering reliability, we&apos;re your
           trusted partner in property maintenance , where every detail is
@@ -17,8 +17,8 @@ const WhyCoosUs = () => {
           top-notch care for your property. Choose excellence. Choose Baraqas
         </p>
       </div>
-      <div className="md:grid grid-cols-2 items-center gap-3 max-w-6xl mx-auto mb-16 mt-6 px-3 md:px-0">
-        <div className="col-span-1 ">
+      <div className="md:grid grid-cols-2 items-center gap-3 max-w-6xl mx-auto mb-6 md:mb-16 mt-6 px-3 md:px-0">
+        <div className="col-span-1 hidden md:block">
           <Lottie
             animationData={techSphere}
             width={350}
@@ -26,7 +26,7 @@ const WhyCoosUs = () => {
             loop={true}
           />
         </div>
-        <div className="col-span-1 space-y-2 md:mt-7">
+        <div className="col-span-1 space-y-2 md:mt-7 text-sm md:text-base px-4 md:px-0">
           <p>
             <span className="font-bold">Expertise and Excellence: </span> With
             years of industry experience and a team of skilled professionals,
