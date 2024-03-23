@@ -21,7 +21,7 @@ const ContactUs = () => {
           </p>
           <div className="md:flex font-semibold p-2 md:p-6 text-sm md:text-lg">
             <p>Email for contact us:</p>
-            <p className=" font-bold">
+            <p className=" font-bold ml-2">
               baraqapropertyservices@gmail.com
             </p>
           </div>

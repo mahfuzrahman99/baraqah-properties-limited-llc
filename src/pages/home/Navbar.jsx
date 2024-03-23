@@ -78,7 +78,7 @@ const Navbar = () => {
     </>
   );
   const handleLogout = () => {
-    logOut()
+    logOut();
     navigate("/login");
   };
 
@@ -119,9 +119,6 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center gap-2">
-          {/* <div className="">
-            <img className="h-[50px] rounded-lg" src={navLogo} alt="" />
-          </div> */}
         </div>
       </div>
       <div className="">
@@ -164,10 +161,6 @@ const Navbar = () => {
           ) : (
             ""
           )}
-          {/* <label
-            tabIndex={0}
-            className="btn btn-outline btn-circle border-none hover:bg-transparent avatar"
-          ></label> */}
         </div>
       </div>
     </div>

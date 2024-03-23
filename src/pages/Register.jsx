@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/exhaustive-deps */
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=bb5a16f772589f5febc04c57a62be37d`;
 
@@ -31,11 +31,17 @@ const Register = ({ showModal, setShowModal }) => {
               axiosPublic.post("/users", userInfo).then((res) => {
                 if (res.data.insertedId) {
                   e.target.reset();
-                  swal("Success!", "Registration Successfully!", "success");
+                  Swal.fire({
+                    position: "top",
+                    icon: "success",
+                    title: "Login successfully",
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
                 }
               });
       } else {
-        swal(
+        Swal(
           "Error",
           "Your Password Must Be 6 character or longer and have atleast a uppercase and a spacial character",
           "error"

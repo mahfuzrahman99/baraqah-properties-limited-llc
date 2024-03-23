@@ -2,8 +2,10 @@ import { NavLink, Outlet } from "react-router-dom";
 import useGetUserRole from "../../hooks/useGetUserRole";
 
 const OwnerDashboard = () => {
-  const isSuperAdmin = useGetUserRole()
-  console.log(isSuperAdmin)
+
+  const isSuperAdmin = useGetUserRole();
+  console.log(isSuperAdmin);
+  
   return (
     <div>
       <div className="drawer">
@@ -48,6 +50,7 @@ const OwnerDashboard = () => {
                 <div className="divider"></div>
                 <li>
                   <NavLink
+                    key={"dashboardHome"}
                     to="/"
                     className={({ isActive, isPending }) =>
                       isPending
