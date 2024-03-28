@@ -1,5 +1,3 @@
-import Lottie from "lottie-react";
-import contactANM from "../../../public/Contact_Us.json";
 
 const ContactUs = () => {
   return (
@@ -27,12 +25,12 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="max-w-[400px] hidden md:block">
-          <Lottie
+          {/* <Lottie
             animationData={contactANM}
-            width={250}
-            height={350}
+            // width={250}
+            // height={350}
             loop={true}
-          />
+          /> */}
         </div>
       </div>
     </>

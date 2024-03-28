@@ -1,10 +1,9 @@
 import Footer from "./Footer";
-import Navbar from "./Navbar";
 
 const About = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="max-w-4xl mx-auto mb-10 p-4 md:p-0">
         <h1 className="text-center md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent my-3 md:my-10">
           About Baraqa Properties Limited LLC

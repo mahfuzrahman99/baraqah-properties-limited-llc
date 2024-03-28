@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
 import useGetUserRole from "../../hooks/useGetUserRole";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -10,7 +10,6 @@ const Navbar = () => {
   const admin = superAdmin === "Super_Admin";
   const admin0 = superAdmin === "Admin";
   const navigate = useNavigate();
-
   const isDarkTheme = true;
 
   const navLinks = (
@@ -72,9 +71,7 @@ const Navbar = () => {
             DASHBOARD
           </NavLink>
         </li>
-      ) : (
-        ""
-      )}
+      ) : null}
     </>
   );
   const handleLogout = () => {

@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import useGetUserRole from "../../hooks/useGetUserRole";
 
 const OwnerDashboard = () => {
@@ -49,19 +49,12 @@ const OwnerDashboard = () => {
                 )}
                 <div className="divider"></div>
                 <li>
-                  <NavLink
-                    key={"dashboardHome"}
+                  <Link
                     to="/"
-                    className={({ isActive, isPending }) =>
-                      isPending
-                        ? "pending"
-                        : isActive
-                        ? "text-[#311A36] hover:text-[ff4a4a] hover:font-bold underline font-bold"
-                        : "font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
-                    }
+                    className="font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
                   >
                     HOME
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </div>

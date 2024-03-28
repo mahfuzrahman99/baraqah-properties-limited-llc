@@ -1,14 +1,12 @@
 import Banner from "./Banner";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
 import WhyCoosUs from "./WhyCoosUs";
 
 
 const Home = () => {
     return (
         <div>
-            <Navbar/>
             <div>
                 <Banner/>
             </div>
