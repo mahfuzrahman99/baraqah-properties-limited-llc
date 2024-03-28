@@ -4,6 +4,7 @@ import { useState } from "react";
 import DemoOneCard from "../../components/DemoOneCard";
 import useFetchDemos from "../../hooks/useFetchDemos";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
 AOS.init();
 
 const OurWorks = () => {
@@ -36,7 +37,7 @@ const OurWorks = () => {
 
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar/>
       <div className="md:flex justify-between max-w-5xl mx-auto md:mt-16 md:mb-6">
         <div></div>
         <div>

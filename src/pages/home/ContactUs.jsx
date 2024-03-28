@@ -1,4 +1,4 @@
-
+import contactImg from "../../assets/contact_Us.gif";
 const ContactUs = () => {
   return (
     <>
@@ -10,7 +10,7 @@ const ContactUs = () => {
         Contact us now to embark on a journey towards your property maintenance
         goals. Let&apos;s elevate your property experience together.
       </p>
-      <div className="md:flex items-center max-w-5xl mx-auto px-4 md:px-0">
+      <div className="md:flex items-center max-w-5xl mx-auto px-4 md:px-0 bg-white rounded-lg mt-3 shadow-md">
         <div>
           <p className="md:text-center text-justify text-xs md:text-base font-medium md:mt-3 max-w-[550px] p-2 md:p-6">
             Contact us today to learn more about our services and how we can
@@ -25,12 +25,7 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="max-w-[400px] hidden md:block">
-          {/* <Lottie
-            animationData={contactANM}
-            // width={250}
-            // height={350}
-            loop={true}
-          /> */}
+          <img className="rounded-lg" src={contactImg} alt="" />
         </div>
       </div>
     </>
