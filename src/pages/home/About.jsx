@@ -1,5 +1,5 @@
 import Footer from "./Footer";
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
 
 const About = () => {
   return (
@@ -12,9 +12,9 @@ const About = () => {
         <span>
           <p>
             <span className="text-3xl font-bold">*</span>
-            Welcome to Baraqa Property Services LLC, where we redefine property
+            Welcome to Baraqa Property Services LLC, where we redefine property.
             maintenance solutions. Established with a commitment to excellence,
-            Baraqa stands as your premier choice for comprehensive property
+            Baraqa stands as your premier choice for comprehensive property.
             care. Beyond mere service provision, we aspire to be your trusted
             partner, dedicated to safeguarding and enhancing the value of your
             valuable assets.
@@ -24,10 +24,10 @@ const About = () => {
             <span className="text-3xl font-bold">*</span>
             At Baraqa, we understand the significance of your properties.
             Whether you&apos;re a homeowner, a landlord, or a property manager,
-            we recognize that your properties are more than just structures;
-            they represent investments, homes, and livelihoods. That&apos;s why
-            we approach every task with meticulous attention to detail,
-            unwavering dedication, and a passion for delivering results that
+            We recognize that your properties are more than just structures.
+            They represent investments, homes, and livelihoods. That&apos;s why
+            We approach every task with meticulous attention to detail.
+            unwavering dedication and a passion for delivering results that
             exceed expectations.
           </p>
           <br />
@@ -45,7 +45,7 @@ const About = () => {
           <p>
             <span className="text-3xl font-bold">*</span>
             When you choose Baraqa, you can rest assured that your properties
-            are in capable hands. We adhere to the highest standards of quality
+            are in capable hands. We adhere to the highest standards of quality.
             and professionalism, prioritizing integrity, transparency, and open
             communication every step of the way. Whether it&apos;s landscaping,
             cleaning, repairs, or renovations, we approach every project with a
@@ -58,7 +58,7 @@ const About = () => {
             Our dedication to customer satisfaction is unwavering. We understand
             that your trust is earned through consistent reliability and
             exceptional service, and we go above and beyond to exceed your
-            expectations. From the moment you engage with us to the completion
+            expectations. From the moment you engage with us to its completion
             of the project, we strive to make your experience with Baraqa
             seamless, stress-free, and truly remarkable.
           </p>

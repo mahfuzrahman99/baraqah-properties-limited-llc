@@ -10,7 +10,7 @@ AOS.init();
 const OurWorks = () => {
   const [demos] = useFetchDemos();
   const [searchedDemo, setSearchedDemo] = useState();
-  const [searchText, setSearchTex] = useState("");
+  // const [searchText, setSearchTex] = useState("");
 
   const handleInputText = (e) => {
     console.log(e.key)
@@ -44,7 +44,7 @@ const OurWorks = () => {
           <form onSubmit={handleSearchBlog} className="join">
             <input
               onKeyUp={handleInputText}
-              value={searchText}
+              // value={searchText}
               type="text"
               name="search"
               className="hover:border-none px-5 join-item outline-none w-[250px]"
