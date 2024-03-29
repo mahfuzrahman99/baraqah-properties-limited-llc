@@ -1,8 +1,8 @@
 import contactImg from "../../assets/contact_Us.gif";
 const ContactUs = () => {
   return (
-    <>
-      <h1 className="text-center text-lg md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent">
+    <div className="bg-white max-w-5xl mx-auto rounded-lg shadow-lg">
+      <h1 className="text-center text-lg md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent md:pt-6">
         For any questions please contact Us
       </h1>
 
@@ -28,7 +28,7 @@ const ContactUs = () => {
           <img className="rounded-lg" src={contactImg} alt="" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
