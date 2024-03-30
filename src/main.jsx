@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <QueryClientProvider client={queryClient}>
       <PhotoProvider>
         <AuthProvider>
-          <div className="bg-[#f2f2f2]">
+          <div className="bg-[#f2f2f2] text-[#141414]">
             <RouterProvider router={router} />
           </div>
         </AuthProvider>
