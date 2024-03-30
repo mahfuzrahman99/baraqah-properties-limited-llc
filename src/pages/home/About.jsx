@@ -1,12 +1,13 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import aboutLogo from "../../assets/logo.png";
+import { TiTick } from "react-icons/ti";
 
 const About = () => {
   return (
     <div>
       <Navbar />
-      <div className="max-w-4xl mx-auto mb-10 p-4 md:p-0">
+      <div className="max-w-6xl mx-auto mb-10 p-4 md:p-0">
         <div className="flex justify-center">
           <img
             className="h-[210px] rounded-lg"
@@ -23,98 +24,330 @@ const About = () => {
         <div className="md:grid grid-cols-3 md:gap-9 space-y-2 md:space-y-0 my-8">
           <p>
             <span className="font-bold">1. Landscaping Services:</span>
-            <ul style={{ listStyleType: "disc" }}>
-              <li>Lawn mowing</li>
-              <li>Hedge trimming</li>
-              <li>Tree pruning and removal</li>
-              <li>Weed control</li>
-              <li>Mulching</li>
-              <li>Planting and flower bed maintenance</li>
+            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Lawn mowing</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Hedge trimming</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Tree pruning and removal</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Weed control</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Mulching</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Planting and flower bed maintenance</span>
+              </li>
             </ul>
           </p>
           <p>
             <span className="font-bold">2. Plumbing Services:</span>
-            <ul style={{ listStyleType: "disc" }}>
-              <li>Repairing leaks and drips</li>
-              <li>Unclogging drains and toilets</li>
-              <li>Fixture installation and repair</li>
-              <li>Water heater maintenance and installation</li>
-              <li>Pipe repair and replacement</li>
+            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Repairing leaks and drips</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Unclogging drains and toilets</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Fixture installation and repair</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Water heater maintenance and installation</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Pipe repair and replacement</span>
+              </li>
             </ul>
           </p>
           <p>
             <span className="font-bold">3. Electrical Services:</span>
-            <ul style={{ listStyleType: "disc" }}>
-              <li>Wiring and rewiring</li>
-              <li>Lighting installation and repair</li>
-              <li>Outlet and switch repair</li>
-              <li>Circuit breaker panel upgrades</li>
-              <li>Ceiling fan installation</li>
+            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Wiring and rewiring</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Lighting installation and repair</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Outlet and switch repair</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Circuit breaker panel upgrades</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Ceiling fan installation</span>
+              </li>
             </ul>
           </p>
           <p>
             <span className="font-bold">4. HVAC Services:</span>
-            <ul style={{ listStyleType: "disc" }}>
-              <li>Air conditioning repair and installation</li>
-              <li>Heating system repair and installation</li>
-              <li>HVAC system maintenance</li>
-              <li>Duct cleaning and repair</li>
-              <li>Thermostat installation and repair</li>
+            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Air conditioning repair and installation</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Heating system repair and installation</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>HVAC system maintenance</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Duct cleaning and repair</span>
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                <span>Thermostat installation and repair</span>
+              </li>
             </ul>
           </p>
           <p>
             <span className="font-bold">5. Roofing Services:</span>
-            <ul style={{ listStyleType: "disc" }}>
-              <li>Roof inspection</li>
-              <li>Roof repair and replacement</li>
-              <li>Shingle replacement</li>
-              <li>Gutter cleaning and repair</li>
-              <li>Flashing repair</li>
+            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Roof inspection
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Roof repair and replacement
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Shingle replacement
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Gutter cleaning and repair
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Flashing repair
+              </li>
             </ul>
           </p>
           <p>
             <span className="font-bold">6. Carpentry Services:</span>
-            <ul style={{ listStyleType: "disc" }}>
-              <li>Deck repair and construction</li>
-              <li>Fence repair and installation</li>
-              <li>Trim and molding installation</li>
-              <li>Door and window repair</li>
-              <li>Siding repair and replacement</li>
+            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Deck repair and construction
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Fence repair and installation
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Trim and molding installation
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Door and window repair
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Siding repair and replacement
+              </li>
             </ul>
           </p>
           <p>
             <span className="font-bold">7. Appliance Services:</span>
-            <ul style={{ listStyleType: "disc" }}>
-              <li>Appliance installation</li>
-              <li>Refrigerator repair</li>
-              <li>Washer and dryer repair</li>
-              <li>Oven and stove repair</li>
-              <li>Dishwasher repair</li>
+            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Appliance installation
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Refrigerator repair
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Washer and dryer repair
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Oven and stove repair
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Dishwasher repair
+              </li>
             </ul>
           </p>
           <p>
             <span className="font-bold">8. Painting Services:</span>
-            <ul style={{ listStyleType: "disc" }}>
-              <li>Interior painting</li>
-              <li>Exterior painting</li>
-              <li>Drywall repair and painting</li>
-              <li>Trim painting</li>
-              <li>Cabinet painting and refinishing</li>
+            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Interior painting
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Exterior painting
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Drywall repair and painting
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Trim painting
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Cabinet painting and refinishing
+              </li>
             </ul>
           </p>
           <p>
             <span className="font-bold">9. General Maintenance Services:</span>
-            <ul style={{ listStyleType: "disc" }}>
-              <li>Property inspections</li>
-              <li>Cleaning services</li>
-              <li>Trash removal</li>
-              <li>Pressure washing</li>
-              <li>Winterization and snow removal</li>
+            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Property inspections
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Cleaning services
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Trash removal
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Pressure washing
+              </li>
+              <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
+                <span>
+                  <TiTick />
+                </span>
+                Winterization and snow removal
+              </li>
             </ul>
           </p>
         </div>
         <div>
-          <p className="text-center font-semibold md:mt-14">Emergency Services: 24/7 emergency repairs</p>
+          <p className="text-center font-semibold md:mt-14">
+            Emergency Services: 24/7 emergency repairs
+          </p>
         </div>
       </div>
       <Footer />
