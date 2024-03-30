@@ -9,6 +9,7 @@ const Navbar = () => {
   const superAdmin = useGetUserRole();
   const admin = superAdmin === "Super_Admin";
   const admin0 = superAdmin === "Admin";
+  console.log(admin, admin0)
   const navigate = useNavigate();
   const isDarkTheme = true;
 
@@ -71,7 +72,22 @@ const Navbar = () => {
             DASHBOARD
           </NavLink>
         </li>
-      ) : null}
+      ) : (
+        null
+        // <li>
+        //   <NavLink
+        //     className={({ isActive, isPending }) =>
+        //       isPending
+        //         ? "pending"
+        //         : isActive
+        //         ? "font-bold hover:text-[#8A8B8C] hover:font-bold  text-[#8A8B8C]"
+        //         : "font-bold hover:text-[#8A8B8C] hover:font-bold  text-[#8A8B8C]"
+        //     }
+        //   >
+        //     DASHBOARD
+        //   </NavLink>
+        // </li>
+      )}
     </>
   );
   const handleLogout = () => {
@@ -115,8 +131,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <div className="flex items-center gap-2">
-        </div>
+        <div className="flex items-center gap-2"></div>
       </div>
       <div className="">
         <div className=" hidden lg:flex justify-center items-center">
@@ -124,37 +139,35 @@ const Navbar = () => {
         </div>
         <div className="dropdown dropdown-end flex items-center ">
           {user ? (
-            <>
-              <div className="dropdown z-10 dropdown-bottom dropdown-end">
-                <figure tabIndex={0}>
-                  <img
-                    src={user?.photoURL}
-                    className="h-[35px] md:h-[40px] w-[40px] rounded-full"
-                    alt={user?.name ? user?.name : "Not Found"}
-                  />
-                </figure>
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52 bg-[#0B0633] bg-opacity-60"
-                >
-                  <li>
-                    <a className="text-[#fff]">
-                      {user?.name ? user?.name : "No name available"}
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <button
-                        onClick={handleLogout}
-                        className=" btn-sm border-none btn-outline rounded-md font-semibold uppercase hover:bg-transparent  text-[#fff]"
-                      >
-                        Logout
-                      </button>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </>
+            <div className="dropdown z-10 dropdown-bottom dropdown-end">
+              <figure tabIndex={0}>
+                <img
+                  src={user?.photoURL}
+                  className="h-[35px] md:h-[40px] w-[40px] rounded-full"
+                  alt={user?.name ? user?.name : "Not Found"}
+                />
+              </figure>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52 bg-[#0B0633] bg-opacity-60"
+              >
+                <li>
+                  <a className="text-[#fff]">
+                    {user?.name ? user?.name : "No name available"}
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <button
+                      onClick={handleLogout}
+                      className=" btn-sm border-none btn-outline rounded-md font-semibold uppercase hover:bg-transparent  text-[#fff]"
+                    >
+                      Logout
+                    </button>
+                  </a>
+                </li>
+              </ul>
+            </div>
           ) : (
             ""
           )}

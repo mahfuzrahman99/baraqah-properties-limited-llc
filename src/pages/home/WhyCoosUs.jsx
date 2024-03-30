@@ -1,27 +1,31 @@
-import whyChoosUs from "../../assets/Why_choos_us.gif";
+
+import choosVideo from "../../assets/Why_choos_us.mp4";
 const WhyCoosUs = () => {
   return (
     <div className="max-w-5xl mx-auto">
       <div className="md:mt-16 mt-6 px-2 md:px-0 ">
         <h1 className="text-center text-xl md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent">
-          Why Choose Baraqa Properties?
+          Why Choose Baraqa Property Services LLC?
         </h1>
         <p className="md:text-center text-justify text-xs md:text-base font-medium mt-3 max-w-4xl mx-auto px-4 md:px-0 ">
-          Discover the difference with Baraqa Property Services LLC! From From
-          From unparalleled quality to unwavering reliability, we&apos;re your
-          trusted partner in property maintenance, where every detail is
-          meticulously cared for with integrity and professionalism. . With our
-          client-focused approach and skilled professionals, we guarantee
-          top-notch care for your property. Choose excellence. Choose Baraqas
+          Top notch quality coupled with unwavering
+          reliability makes Baraqa Property Services LLC your trusted partner in
+          property maintenance. We aim to build long term relationships with our
+          customer focused approach to services and our team of professionals
+          are meticulous about every detail serving with integrity and
+          professionalism.
         </p>
       </div>
       <div className="md:grid grid-cols-2 items-center gap-3 max-w-6xl mx-auto mb-6 md:mb-16 mt-6 px-3 md:px-0">
         <div className="col-span-1 hidden md:block">
-          <img className="rounded-lg md:h-[520px] md:mt-6 md:w-[530px]" src={whyChoosUs} alt="" />
+          {/* video div */}
+          <video className="md:mt-5" id="choosVideo" autoPlay loop muted>
+            <source src={choosVideo} type="video/mp4" />
+          </video>
         </div>
-        <div className="col-span-1 space-y-2 md:mt-7 text-sm md:text-base px-4 md:px-0">
+        <div className="col-span-1 space-y-2 md:mt-7 text-sm md:text-base font-normal px-4 md:px-0">
           <p>
-            <span className="font-bold">Expertise and Excellence: </span> 
+            <span className="font-bold">Expertise and Excellence: </span>
             <br />
             With years of industry experience and a team of skilled
             professionals, Baraqa Property Services LLC brings unparalleled
@@ -48,17 +52,16 @@ const WhyCoosUs = () => {
           </p>
           <p>
             <span className="font-bold">Quality Craftsmanship:</span>
-            <br /> 
-            We take pride in our workmanship and are committed to delivering superior
-            results on every project. With attention to detail and a focus on
-            quality, we guarantee long-lasting solutions that exceed
+            <br />
+            We take pride in our workmanship and are committed to delivering
+            superior results on every project. With attention to detail and a
+            focus on quality, we guarantee long-lasting solutions that exceed
             expectations.
           </p>
         </div>
         <div className="col-span-2">
           <p>
-            <span className="font-bold">Transparent Communication:</span>{" "}
-            <br />
+            <span className="font-bold">Transparent Communication:</span> <br />
             Communication is key to our success. We believe in transparency and
             open communication with our clients, keeping you informed at every
             stage of the project and ensuring your peace of mind.

@@ -23,7 +23,7 @@ const Login = () => {
 
     try {
       const res = await axiosPublic.post("/login", userCredentials);
-      console.log(res.data);
+      // console.log(res.data);
       
       // Assuming signInUser is a function that sets the user context
       signInUser(res.data); // You might need to adjust this depending on what your backend returns and what signInUser expects

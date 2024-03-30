@@ -26,14 +26,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logOut = () => {
-    setUser({
-      _id: "",
-      name: "",
-      email: "",
-      password: "",
-      photoURL: "",
-      role: "",
-    });
+    setUser("");
     // Local storage e user info clear kora
     localStorage.removeItem("user");
   };
@@ -43,7 +36,7 @@ const AuthProvider = ({ children }) => {
     // Local storage e user info store kora
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
-  console.log(user);
+  // console.log(user);
   const authInfo = {
     user,
     signInUser,

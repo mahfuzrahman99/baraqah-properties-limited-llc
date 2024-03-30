@@ -3,7 +3,7 @@ const ContactUs = () => {
   return (
     <div className="bg-white max-w-5xl mx-auto rounded-lg shadow-lg">
       <h1 className="text-center text-lg md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent md:pt-6">
-        For any questions please contact Us
+        For any questions please email
       </h1>
 
       <p className="md:text-center text-justify text-xs md:text-base font-medium mt-3 max-w-2xl mx-auto px-4 md:px-0">
@@ -18,7 +18,7 @@ const ContactUs = () => {
             serving you and exceeding your expectations every step of the way.
           </p>
           <div className="md:flex font-semibold p-2 md:p-6 text-sm md:text-lg">
-            <p>Email for contact us:</p>
+            <p>Get in touch with us at:</p>
             <p className=" font-bold ml-2">
               baraqapropertyservices@gmail.com
             </p>

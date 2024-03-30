@@ -1,76 +1,121 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import aboutLogo from "../../assets/logo.png";
 
 const About = () => {
   return (
     <div>
       <Navbar />
       <div className="max-w-4xl mx-auto mb-10 p-4 md:p-0">
-        <h1 className="text-center md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent my-3 md:my-10">
-          About Baraqa Properties Limited LLC
+        <div className="flex justify-center">
+          <img
+            className="h-[210px] rounded-lg"
+            src={aboutLogo}
+            alt="Baraqa Property Services LLC Logo"
+          />
+        </div>
+        <h1 className="text-lg font-semibold my-4 text-center">
+          At Baraqa Property Services LLC, we are committed to providing
+          comprehensive property maintenance solutions to meet all your needs.
+          Whether it&apos;s a small repair or a major renovation project, you
+          can rely on us for top-quality service and exceptional results.
         </h1>
-        <span>
+        <div className="md:grid grid-cols-3 md:gap-9 space-y-2 md:space-y-0 my-8">
           <p>
-            <span className="text-3xl font-bold">*</span>
-            Welcome to Baraqa Property Services LLC, where we redefine property.
-            maintenance solutions. Established with a commitment to excellence,
-            Baraqa stands as your premier choice for comprehensive property.
-            care. Beyond mere service provision, we aspire to be your trusted
-            partner, dedicated to safeguarding and enhancing the value of your
-            valuable assets.
+            <span className="font-bold">1. Landscaping Services:</span>
+            <ul style={{ listStyleType: "disc" }}>
+              <li>Lawn mowing</li>
+              <li>Hedge trimming</li>
+              <li>Tree pruning and removal</li>
+              <li>Weed control</li>
+              <li>Mulching</li>
+              <li>Planting and flower bed maintenance</li>
+            </ul>
           </p>
-          <br />
           <p>
-            <span className="text-3xl font-bold">*</span>
-            At Baraqa, we understand the significance of your properties.
-            Whether you&apos;re a homeowner, a landlord, or a property manager,
-            We recognize that your properties are more than just structures.
-            They represent investments, homes, and livelihoods. That&apos;s why
-            We approach every task with meticulous attention to detail.
-            unwavering dedication and a passion for delivering results that
-            exceed expectations.
+            <span className="font-bold">2. Plumbing Services:</span>
+            <ul style={{ listStyleType: "disc" }}>
+              <li>Repairing leaks and drips</li>
+              <li>Unclogging drains and toilets</li>
+              <li>Fixture installation and repair</li>
+              <li>Water heater maintenance and installation</li>
+              <li>Pipe repair and replacement</li>
+            </ul>
           </p>
-          <br />
           <p>
-            <span className="text-3xl font-bold">*</span>
-            Our team comprises seasoned professionals who bring years of
-            experience and expertise to the table. From routine maintenance
-            tasks to complex projects, we have the knowledge, skills, and
-            resources to handle them all with finesse. We pride ourselves on our
-            ability to tailor our services to meet the unique needs of each
-            client, ensuring personalized solutions that align perfectly with
-            your objectives.
+            <span className="font-bold">3. Electrical Services:</span>
+            <ul style={{ listStyleType: "disc" }}>
+              <li>Wiring and rewiring</li>
+              <li>Lighting installation and repair</li>
+              <li>Outlet and switch repair</li>
+              <li>Circuit breaker panel upgrades</li>
+              <li>Ceiling fan installation</li>
+            </ul>
           </p>
-          <br />
           <p>
-            <span className="text-3xl font-bold">*</span>
-            When you choose Baraqa, you can rest assured that your properties
-            are in capable hands. We adhere to the highest standards of quality.
-            and professionalism, prioritizing integrity, transparency, and open
-            communication every step of the way. Whether it&apos;s landscaping,
-            cleaning, repairs, or renovations, we approach every project with a
-            commitment to excellence and a determination to deliver outstanding
-            results.
+            <span className="font-bold">4. HVAC Services:</span>
+            <ul style={{ listStyleType: "disc" }}>
+              <li>Air conditioning repair and installation</li>
+              <li>Heating system repair and installation</li>
+              <li>HVAC system maintenance</li>
+              <li>Duct cleaning and repair</li>
+              <li>Thermostat installation and repair</li>
+            </ul>
           </p>
-          <br />
           <p>
-            <span className="text-3xl font-bold">*</span>
-            Our dedication to customer satisfaction is unwavering. We understand
-            that your trust is earned through consistent reliability and
-            exceptional service, and we go above and beyond to exceed your
-            expectations. From the moment you engage with us to its completion
-            of the project, we strive to make your experience with Baraqa
-            seamless, stress-free, and truly remarkable.
+            <span className="font-bold">5. Roofing Services:</span>
+            <ul style={{ listStyleType: "disc" }}>
+              <li>Roof inspection</li>
+              <li>Roof repair and replacement</li>
+              <li>Shingle replacement</li>
+              <li>Gutter cleaning and repair</li>
+              <li>Flashing repair</li>
+            </ul>
           </p>
-          <br />
           <p>
-            <span className="text-3xl font-bold">*</span>
-            Thank you for considering Baraqa Property Services LLC for your
-            property maintenance needs. We look forward to the opportunity to
-            serve you and to become your trusted partner in ensuring the
-            long-term care and success of your valuable properties.
+            <span className="font-bold">6. Carpentry Services:</span>
+            <ul style={{ listStyleType: "disc" }}>
+              <li>Deck repair and construction</li>
+              <li>Fence repair and installation</li>
+              <li>Trim and molding installation</li>
+              <li>Door and window repair</li>
+              <li>Siding repair and replacement</li>
+            </ul>
           </p>
-        </span>
+          <p>
+            <span className="font-bold">7. Appliance Services:</span>
+            <ul style={{ listStyleType: "disc" }}>
+              <li>Appliance installation</li>
+              <li>Refrigerator repair</li>
+              <li>Washer and dryer repair</li>
+              <li>Oven and stove repair</li>
+              <li>Dishwasher repair</li>
+            </ul>
+          </p>
+          <p>
+            <span className="font-bold">8. Painting Services:</span>
+            <ul style={{ listStyleType: "disc" }}>
+              <li>Interior painting</li>
+              <li>Exterior painting</li>
+              <li>Drywall repair and painting</li>
+              <li>Trim painting</li>
+              <li>Cabinet painting and refinishing</li>
+            </ul>
+          </p>
+          <p>
+            <span className="font-bold">9. General Maintenance Services:</span>
+            <ul style={{ listStyleType: "disc" }}>
+              <li>Property inspections</li>
+              <li>Cleaning services</li>
+              <li>Trash removal</li>
+              <li>Pressure washing</li>
+              <li>Winterization and snow removal</li>
+            </ul>
+          </p>
+        </div>
+        <div>
+          <p className="text-center font-semibold md:mt-14">Emergency Services: 24/7 emergency repairs</p>
+        </div>
       </div>
       <Footer />
     </div>
