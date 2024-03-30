@@ -10,21 +10,21 @@ const About = () => {
       <div className="max-w-6xl mx-auto mb-10 p-4 md:p-0">
         <div className="flex justify-center">
           <img
-            className="h-[210px] rounded-lg"
+            className="h-[150px] md:h-[210px] rounded-lg"
             src={aboutLogo}
             alt="Baraqa Property Services LLC Logo"
           />
         </div>
-        <h1 className="text-lg font-semibold my-4 text-center">
+        <h1 className="text-sm md:text-lg font-semibold my-4 text-center ">
           At Baraqa Property Services LLC, we are committed to providing
           comprehensive property maintenance solutions to meet all your needs.
           Whether it&apos;s a small repair or a major renovation project, you
           can rely on us for top-quality service and exceptional results.
         </h1>
-        <div className="md:grid grid-cols-3 md:gap-9 space-y-2 md:space-y-0 my-8">
+        <div className="md:grid grid-cols-3 md:gap-9 space-y-4 md:space-y-0 my-8">
           <p>
             <span className="font-bold">1. Landscaping Services:</span>
-            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+            <ul className="r p-2 shadow-xl rounded-md h-[290px] md:h-[270px]">
               <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
                 <span>
                   <TiTick />
@@ -65,7 +65,7 @@ const About = () => {
           </p>
           <p>
             <span className="font-bold">2. Plumbing Services:</span>
-            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+            <ul className="r p-2 shadow-xl rounded-md h-[290px] md:h-[270px]">
               <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
                 <span>
                   <TiTick />
@@ -100,7 +100,7 @@ const About = () => {
           </p>
           <p>
             <span className="font-bold">3. Electrical Services:</span>
-            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+            <ul className="r p-2 shadow-xl rounded-md h-[290px] md:h-[270px]">
               <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
                 <span>
                   <TiTick />
@@ -135,7 +135,7 @@ const About = () => {
           </p>
           <p>
             <span className="font-bold">4. HVAC Services:</span>
-            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+            <ul className="r p-2 shadow-xl rounded-md h-[290px] md:h-[270px]">
               <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
                 <span>
                   <TiTick />
@@ -170,7 +170,7 @@ const About = () => {
           </p>
           <p>
             <span className="font-bold">5. Roofing Services:</span>
-            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+            <ul className="r p-2 shadow-xl rounded-md h-[290px] md:h-[270px]">
               <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
                 <span>
                   <TiTick />
@@ -205,7 +205,7 @@ const About = () => {
           </p>
           <p>
             <span className="font-bold">6. Carpentry Services:</span>
-            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+            <ul className="r p-2 shadow-xl rounded-md h-[290px] md:h-[270px]">
               <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
                 <span>
                   <TiTick />
@@ -240,7 +240,7 @@ const About = () => {
           </p>
           <p>
             <span className="font-bold">7. Appliance Services:</span>
-            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+            <ul className="r p-2 shadow-xl rounded-md h-[290px] md:h-[270px]">
               <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
                 <span>
                   <TiTick />
@@ -275,7 +275,7 @@ const About = () => {
           </p>
           <p>
             <span className="font-bold">8. Painting Services:</span>
-            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+            <ul className="r p-2 shadow-xl rounded-md h-[290px] md:h-[270px]">
               <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
                 <span>
                   <TiTick />
@@ -310,7 +310,7 @@ const About = () => {
           </p>
           <p>
             <span className="font-bold">9. General Maintenance Services:</span>
-            <ul className="r p-2 shadow-xl rounded-md h-[270px]">
+            <ul className="r p-2 shadow-xl rounded-md h-[290px] md:h-[270px]">
               <li className="flex gap-1 items-center p-2 shadow-md rounded-md">
                 <span>
                   <TiTick />
@@ -345,7 +345,7 @@ const About = () => {
           </p>
         </div>
         <div>
-          <p className="text-center font-semibold md:mt-14">
+          <p className="text-center text-xl font-bold md:mt-14">
             Emergency Services: 24/7 emergency repairs
           </p>
         </div>
