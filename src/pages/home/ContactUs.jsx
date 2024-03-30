@@ -24,7 +24,7 @@ const ContactUs = () => {
             </p>
           </div>
         </div>
-        <div className="max-w-[400px] hidden md:block">
+        <div className="max-w-[400px]">
           <img className="rounded-lg" src={contactImg} alt="" />
         </div>
       </div>

@@ -42,13 +42,13 @@ export default function SearchDemo({ demos, setSearchedDemo }) {
 
   return (
     <div>
-      <form onSubmit={handleSearchBlog} className="join">
+      <form onSubmit={handleSearchBlog} className="join w-full md:w-auto">
         <input
           onChange={handleInputText}
           value={searchText}
           type="text"
           name="search"
-          className="hover:border-none px-5 join-item outline-none w-[250px]"
+          className="hover:border-none px-5 join-item outline-none w-full md:w-[250px]"
           placeholder="Search a demo by category..."
           autoComplete="off"
         />

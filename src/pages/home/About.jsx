@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div>
       <Navbar />
-      <div className="max-w-6xl mx-auto mb-10 p-4 md:p-0">
+      <div className="max-w-6xl mx-auto md:mb-10 p-4 md:p-0">
         <div className="flex justify-center">
           <img
             className="h-[150px] md:h-[210px] rounded-lg"
@@ -345,7 +345,7 @@ const About = () => {
           </p>
         </div>
         <div>
-          <p className="text-center text-xl font-bold md:mt-14">
+          <p className="text-center text-xs md:text-xl font-bold md:mt-14">
             Emergency Services: 24/7 emergency repairs
           </p>
         </div>

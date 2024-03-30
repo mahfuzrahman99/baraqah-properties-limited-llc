@@ -17,7 +17,7 @@ const WhyCoosUs = () => {
         </p>
       </div>
       <div className="md:grid grid-cols-2 items-center gap-3 max-w-6xl mx-auto mb-6 md:mb-16 mt-6 px-3 md:px-0">
-        <div className="col-span-1 hidden md:block">
+        <div className="col-span-1">
           {/* video div */}
           <video className="md:mt-5" id="choosVideo" autoPlay loop muted>
             <source src={choosVideo} type="video/mp4" />
@@ -59,7 +59,7 @@ const WhyCoosUs = () => {
             expectations.
           </p>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 space-y-2 md:mt-7 text-sm md:text-base font-normal px-4 md:px-0">
           <p>
             <span className="font-bold">Transparent Communication:</span> <br />
             Communication is key to our success. We believe in transparency and
