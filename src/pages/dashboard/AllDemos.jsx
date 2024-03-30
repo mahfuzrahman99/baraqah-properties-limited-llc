@@ -8,9 +8,9 @@ const AllDemos = () => {
   const [showModal, setShowModal] = useState(false);
   const [searchedDemo, setSearchedDemo] = useState();
   const [demos, refetch] = useFetchDemos();
-    // console.log(demos?.length)
-  
-    const demosToDisplay = searchedDemo || demos;
+  // console.log(demos?.length)
+
+  const demosToDisplay = searchedDemo || demos;
   // const demosToDisplay = searchedDemo?.length ? searchedDemo : demos;
   // console.log( typeof(demos))
   return (
@@ -26,14 +26,11 @@ const AllDemos = () => {
           <AddDemo showModal={showModal} setShowModal={setShowModal} />
         </div>
         <div>
-          <SearchDemo demos={demos} setSearchedDemo={setSearchedDemo}/>
+          <SearchDemo demos={demos} setSearchedDemo={setSearchedDemo} />
         </div>
       </div>
       <div>
-        <AllDemosToDisplay
-          refetch={refetch}
-          demosToDisplay={demosToDisplay}
-        />
+        <AllDemosToDisplay refetch={refetch} demosToDisplay={demosToDisplay} />
       </div>
     </>
   );
