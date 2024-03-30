@@ -18,9 +18,7 @@ const OurWorks = () => {
     <div>
       <Navbar />
       <div className="md:flex justify-between max-w-5xl mx-auto md:mt-16 md:mb-6">
-        <div>
-          {/* this div for flex between */}
-        </div>
+        <div>{/* this div for flex between */}</div>
         <SearchDemo demos={demos} setSearchedDemo={setSearchedDemo} />
       </div>
       <div className="max-w-5xl mx-auto">
