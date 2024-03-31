@@ -6,9 +6,8 @@ const ContactUs = () => {
         For any questions please email
       </h1>
 
-      <p className="md:text-center text-justify text-xs md:text-base font-medium mt-3 max-w-2xl mx-auto px-6 md:px-0">
-        Contact us now to embark on a journey towards your property maintenance
-        goals. Let&apos;s elevate your property experience together.
+      <p className="md:text-center text-xs md:text-base font-medium mt-3 max-w-2xl mx-auto px-6 md:px-0">
+        Let&apos;s elevate your property experience together.
       </p>
       <div className="md:flex items-center max-w-5xl mx-auto px-4 md:px-0 bg-white rounded-lg mt-3 shadow-md">
         <div>
