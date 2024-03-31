@@ -27,12 +27,12 @@ const DemoOneCard = ({ demo }) => {
 
   return (
     <div className="md:hero md:hero-content gap-2 my-2 px-2 md:mb-8 md:border-8 rounded-2xl h-[870px] md:h-[520px] bg-[#A9A3CF] ">
-      <div className="">
+      <div className="flex justify-center">
         <div className="md:relative rounded-t-lg">
           <div className="md:w-11/12">
-            <PhotoView src={demo_after_image}>
+            <PhotoView src={demo_before_image}>
               <img
-                src={demo_after_image}
+                src={demo_before_image}
                 data-aos="fade-down"
                 data-aos-delay="50"
                 data-aos-duration="1000"
@@ -42,9 +42,9 @@ const DemoOneCard = ({ demo }) => {
             </PhotoView>
           </div>
           <div className="md:w-4/5">
-            <PhotoView src={demo_before_image}>
+            <PhotoView src={demo_after_image}>
               <img
-                src={demo_before_image}
+                src={demo_after_image}
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="1000"
