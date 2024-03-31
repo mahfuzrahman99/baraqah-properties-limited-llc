@@ -8,12 +8,12 @@ const AllDemosToDisplay = ({ demosToDisplay, refetch }) => {
   // console.log( typeof(demosToDisplay) );
   return (
     <div className="max-w-5xl mx-auto w-[300px] md:w-auto">
-      <div className="bg-gray-100 p-4">
+      <div className="bg-gray-100 md:p-4 py-4 md:py-0">
         <h1 className="text-xl md:text-3xl mb-2 font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-[#E91E63] bg-clip-text text-transparent">
           Total Demos: {demosToDisplay?.length}
         </h1>
         <div
-          className=" overflow-x-auto h-[52vh] md:h-[65vh] overflow-y-auto"
+          className=" overflow-x-auto h-[59vh] md:h-[65vh] overflow-y-auto"
           style={{ scrollbarWidth: "thin", scrollbarColor: "#a9a3cf #f1f1f1" }}
         >
           <table className="min-w-full bg-gray-300">
