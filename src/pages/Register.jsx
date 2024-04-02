@@ -28,18 +28,18 @@ const Register = ({ showModal, setShowModal }) => {
       const userInfo = { name, email, password, photoURL, role: "Admin" };
 
       if (/^(?=.*[A-Z])(?=.*[\W_]).{6,}$/.test(password)) {
-              axiosPublic.post("/users", userInfo).then((res) => {
-                if (res.data.insertedId) {
-                  e.target.reset();
-                  Swal.fire({
-                    position: "top",
-                    icon: "success",
-                    title: "Login successfully",
-                    showConfirmButton: false,
-                    timer: 1500,
-                  });
-                }
-              });
+        axiosPublic.post("/api/users", userInfo).then((res) => {
+          if (res.data.insertedId) {
+            e.target.reset();
+            Swal.fire({
+              position: "top",
+              icon: "success",
+              title: "Login successfully",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
+        });
       } else {
         Swal(
           "Error",

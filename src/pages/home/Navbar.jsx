@@ -9,7 +9,7 @@ const Navbar = () => {
   const superAdmin = useGetUserRole();
   const admin = superAdmin === "Super_Admin";
   const admin0 = superAdmin === "Admin";
-  console.log(admin, admin0)
+  console.log(admin, admin0);
   const navigate = useNavigate();
   const isDarkTheme = true;
 
@@ -72,27 +72,26 @@ const Navbar = () => {
             DASHBOARD
           </NavLink>
         </li>
-      ) : (
-        null
-        // <li>
-        //   <NavLink
-        //     className={({ isActive, isPending }) =>
-        //       isPending
-        //         ? "pending"
-        //         : isActive
-        //         ? "font-bold hover:text-[#8A8B8C] hover:font-bold  text-[#8A8B8C]"
-        //         : "font-bold hover:text-[#8A8B8C] hover:font-bold  text-[#8A8B8C]"
-        //     }
-        //   >
-        //     DASHBOARD
-        //   </NavLink>
-        // </li>
-      )}
+      ) : null
+      // <li>
+      //   <NavLink
+      //     className={({ isActive, isPending }) =>
+      //       isPending
+      //         ? "pending"
+      //         : isActive
+      //         ? "font-bold hover:text-[#8A8B8C] hover:font-bold  text-[#8A8B8C]"
+      //         : "font-bold hover:text-[#8A8B8C] hover:font-bold  text-[#8A8B8C]"
+      //     }
+      //   >
+      //     DASHBOARD
+      //   </NavLink>
+      // </li>
+      }
     </>
   );
   const handleLogout = () => {
     logOut();
-    navigate("/login");
+    navigate("/api/login");
   };
 
   return (

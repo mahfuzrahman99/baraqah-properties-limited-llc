@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { PhotoView } from "react-photo-view";
-import 'react-photo-view/dist/react-photo-view.css';
+import "react-photo-view/dist/react-photo-view.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { MdOutlineSecurityUpdateGood } from "react-icons/md";
 import Swal from "sweetalert2";
@@ -33,7 +33,7 @@ const AllDemosRow = ({ demo, i, refetch }) => {
 
     if (confirmed.isConfirmed) {
       try {
-        const res = await axiosPublic.delete(`/demos/${id}`);
+        const res = await axiosPublic.delete(`/api/demos/${id}`);
         console.log("console log from hare", res.data);
         if (res.data.deletedCount > 0) {
           refetch();
@@ -59,17 +59,27 @@ const AllDemosRow = ({ demo, i, refetch }) => {
         <td className="py-2 px-4 border-b-4">{i + 1}</td>
         <td className="py-2 px-4 border-b-4">
           <PhotoView src={demo_before_image}>
-            <img className="md:h-12 h-10 md:w-[80px] rounded shadow-lg" src={demo_before_image} alt={demo_Name} />
+            <img
+              className="md:h-12 h-10 md:w-[80px] rounded shadow-lg"
+              src={demo_before_image}
+              alt={demo_Name}
+            />
           </PhotoView>
         </td>
         <td className="py-2 px-4 border-b-4">
           <PhotoView src={demo_after_image}>
-            <img className="md:h-12 h-10 md:w-[80px] rounded shadow-lg" src={demo_after_image} alt={demo_Name} />
+            <img
+              className="md:h-12 h-10 md:w-[80px] rounded shadow-lg"
+              src={demo_after_image}
+              alt={demo_Name}
+            />
           </PhotoView>
         </td>
         <td className="py-2 px-4 border-b-4">{demo_Name}</td>
         <td className="py-2 px-4 border-b-4">{demo_category}</td>
-        <td className="py-2 px-4 border-b-4">{demo_description?.slice(0,10)}</td>
+        <td className="py-2 px-4 border-b-4">
+          {demo_description?.slice(0, 10)}
+        </td>
         <td className="py-2 px-4 border-b-4 p-1 text-xl w-4">
           <button
             onClick={() => setShowModal(true)}

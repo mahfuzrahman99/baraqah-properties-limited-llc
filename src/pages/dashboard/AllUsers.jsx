@@ -24,7 +24,7 @@ const AllUsers = () => {
     });
     if (confirmed.isConfirmed) {
       try {
-        const res = await axiosPublic.delete(`/users/${id}`);
+        const res = await axiosPublic.delete(`/api/users/${id}`);
         if (res.data.deletedCount > 0) {
           refetch();
           Swal.fire({

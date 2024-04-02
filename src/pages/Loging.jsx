@@ -22,12 +22,12 @@ const Login = () => {
     // console.log(test)
 
     try {
-      const res = await axiosPublic.post("/login", userCredentials);
+      const res = await axiosPublic.post("/api/login", userCredentials);
       // console.log(res.data);
-      
+
       // Assuming signInUser is a function that sets the user context
       signInUser(res.data); // You might need to adjust this depending on what your backend returns and what signInUser expects
-      
+
       // This checks if login was successful; adjust according to your backend response structure
       if (res.data && res.data._id) {
         Swal.fire({
@@ -43,9 +43,9 @@ const Login = () => {
       console.error("Login error:", error);
       // Handle login failure, e.g., showing an error message
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Failed to login!',
+        icon: "error",
+        title: "Oops...",
+        text: "Failed to login!",
       });
     }
   };

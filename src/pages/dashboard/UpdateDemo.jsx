@@ -47,7 +47,7 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
         demo_category: data.demo_category,
       };
       console.log(demoItem);
-      const demoRes = await axiosPublic.patch(`/demos/${_id}`, demoItem);
+      const demoRes = await axiosPublic.patch(`/api/demos/${_id}`, demoItem);
       console.log("console from patch request", demoRes.data);
       if (demoRes.data.modifiedCount) {
         reset();
@@ -130,7 +130,9 @@ const UpdateDemo = ({ showModal, setShowModal, demo, refetch }) => {
                       ))}
                     </select> */}
                     {errors.demo_category && (
-                      <p className="text-red-500">{errors.demo_category.message}</p>
+                      <p className="text-red-500">
+                        {errors.demo_category.message}
+                      </p>
                     )}
                   </div>
 

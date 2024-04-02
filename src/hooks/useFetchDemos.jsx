@@ -7,7 +7,7 @@ const useFetchDemos = () => {
   const { data: demos = [], refetch } = useQuery({
     queryKey: ["demos"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/demos");
+      const res = await axiosPublic.get("/api/demos");
       return res.data;
     },
   });

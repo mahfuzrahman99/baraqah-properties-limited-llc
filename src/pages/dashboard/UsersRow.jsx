@@ -7,12 +7,12 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 
-const UsersRow = ({ user, i, handleRemove, refetch}) => {
+const UsersRow = ({ user, i, handleRemove, refetch }) => {
   const { user: user1 } = useContext(AuthContext);
   const axiosPublic = useAxiosPublic();
   const handleUpdateUserRole = async (event) => {
     const role = event.target.innerText;
-    
+
     const confirmed = await Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to update his/shes role!",
@@ -26,7 +26,7 @@ const UsersRow = ({ user, i, handleRemove, refetch}) => {
     if (confirmed.isConfirmed) {
       try {
         console.log(role);
-        const res = await axiosPublic.patch(`/users/${user._id}`, {role});
+        const res = await axiosPublic.patch(`/api/users/${user._id}`, { role });
         if (res.data.modifiedCount > 0) {
           refetch();
           Swal.fire({
@@ -67,10 +67,8 @@ const UsersRow = ({ user, i, handleRemove, refetch}) => {
           <div className="w-full col-span-2">
             <div className="dropdown dropdown-bottom dropdown-end text-[#A9A3CF] text-3xl rounded">
               <div tabIndex={0} role="button" className="">
-                <button
-                  className=""
-                >
-                  <MdSecurityUpdateGood size={40}/>
+                <button className="">
+                  <MdSecurityUpdateGood size={40} />
                 </button>
               </div>
               <ul
@@ -89,12 +87,12 @@ const UsersRow = ({ user, i, handleRemove, refetch}) => {
           </div>
         </td>
         <td className="py-2 px-4 border-b-4">
-            <button
-              onClick={() => handleRemove(user._id, user)}
-              className="bg-red-500 text-white text-3xl p-2 rounded ml-2"
-            >
-              <IoPersonRemoveOutline />
-            </button>
+          <button
+            onClick={() => handleRemove(user._id, user)}
+            className="bg-red-500 text-white text-3xl p-2 rounded ml-2"
+          >
+            <IoPersonRemoveOutline />
+          </button>
         </td>
       </tr>
     </>

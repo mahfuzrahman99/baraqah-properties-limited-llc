@@ -43,7 +43,7 @@ const AddDemo = ({ showModal, setShowModal }) => {
         demo_category: data.demo_category,
       };
       console.log(demoItem);
-      const houseRes = await axiosPublic.post("/demos", demoItem);
+      const houseRes = await axiosPublic.post("/api/demos", demoItem);
       console.log(houseRes.data);
       if (houseRes.data.insertedId) {
         // show success popup
@@ -106,7 +106,9 @@ const AddDemo = ({ showModal, setShowModal }) => {
                       })}
                     />
                     {errors.demo_category && (
-                      <p className="text-red-500">{errors.demo_category.message}</p>
+                      <p className="text-red-500">
+                        {errors.demo_category.message}
+                      </p>
                     )}
                   </div>
 
