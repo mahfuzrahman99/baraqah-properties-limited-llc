@@ -5,7 +5,7 @@ import { AuthContext } from "../providers/AuthProvider";
 const useGetUserRole = () => {
   const { user } = useContext(AuthContext);
   
-  return user.role;
+  return user?.role;
 };
 
 export default useGetUserRole;

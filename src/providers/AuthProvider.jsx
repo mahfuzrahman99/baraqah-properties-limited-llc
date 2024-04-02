@@ -1,22 +1,16 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState, useEffect } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [user, setUser] = useState(() => {
-    // Browser reload korle local storage theke user info retrieve kora
+  const [user, setUser] = useState(null);
+
+  useEffect(()=>{
     const storedUser = localStorage.getItem("user");
-    return storedUser ? JSON.parse(storedUser) : {
-      _id: "",
-      name: "",
-      email: "",
-      password: "",
-      photoURL: "",
-      role: "",
-    };
-  });
+    setUser(storedUser ? JSON.parse(storedUser) : null)
+  }, [])
 
   const signInUser = (userLoggedIn) => {
     setUser(userLoggedIn);
@@ -26,9 +20,9 @@ const AuthProvider = ({ children }) => {
   };
 
   const logOut = () => {
-    setUser("");
+    setUser(null);
     // Local storage e user info clear kora
-    localStorage.removeItem("user");
+    localStorage.clear("user");
   };
 
   // useEffect hook use kora hoise user er state change track korar jonno
