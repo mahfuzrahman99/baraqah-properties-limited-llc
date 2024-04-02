@@ -26,7 +26,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logOut = () => {
-    setUser("");
+    setUser(null);
     // Local storage e user info clear kora
     localStorage.removeItem("user");
   };
