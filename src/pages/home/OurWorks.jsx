@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState } from "react";
@@ -9,10 +10,35 @@ import Navbar from "./Navbar";
 AOS.init();
 
 const OurWorks = () => {
-  const [demos] = useFetchDemos();
+  const [demos, refetch, isLoading] = useFetchDemos();
   const [searchedDemo, setSearchedDemo] = useState(null);
 
   const demosToDisplay = searchedDemo || demos;
+
+  let content = null;
+
+  if (isLoading) {
+    content = (
+      <div className="md:flex gap-4 max-w-5xl mx-auto h-[60vh]">
+        <div className="skeleton h-full w-full flex-1"></div>
+        <div className="flex flex-col md:space-y-12 space-y-4 flex-1">
+          <div className="skeleton h-10 w-28"></div>
+          <div className="skeleton h-10 w-full"></div>
+          <div className="skeleton h-10 w-full"></div>
+          <div className="skeleton h-10 w-full"></div>
+          <div className="skeleton h-10 w-full"></div>
+        </div>
+      </div>
+    );
+  } else {
+    content = (
+      <div className="max-w-5xl mx-auto">
+        {demosToDisplay?.map((demo) => (
+          <DemoOneCard key={demo.id} demo={demo} />
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -21,11 +47,7 @@ const OurWorks = () => {
         <div className="hidden md:block">{/* this div for flex between */}</div>
         <SearchDemo demos={demos} setSearchedDemo={setSearchedDemo} />
       </div>
-      <div className="max-w-5xl mx-auto">
-        {demosToDisplay?.map((demo) => (
-          <DemoOneCard key={demo._id} demo={demo} />
-        ))}
-      </div>
+      {content}
       <Footer />
     </div>
   );
