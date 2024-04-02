@@ -45,20 +45,6 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/login"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "text-[#311A36] hover:text-[#311A36] hover:font-bold underline font-bold"
-              : "font-bold hover:text-[#8A8B8C] hover:font-bold  text-[#8A8B8C]"
-          }
-        >
-          LOGIN
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
           to="/ourWorks"
           className={({ isActive, isPending }) =>
             isPending
