@@ -57,7 +57,7 @@ const Navbar = () => {
           OUR WORKS
         </NavLink>
       </li>
-      {admin || admin0 ? (
+      {/* {admin || admin0 ? ( */}
         <li>
           <NavLink
             to="/owner_dashboard/allDemos"
@@ -72,7 +72,7 @@ const Navbar = () => {
             DASHBOARD
           </NavLink>
         </li>
-      ) : null
+      {/* ) : null
       // <li>
       //   <NavLink
       //     className={({ isActive, isPending }) =>
@@ -86,7 +86,7 @@ const Navbar = () => {
       //     DASHBOARD
       //   </NavLink>
       // </li>
-      }
+      } */}
     </>
   );
   const handleLogout = () => {
