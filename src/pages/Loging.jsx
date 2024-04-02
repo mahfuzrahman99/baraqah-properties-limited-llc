@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import loginImg from "../assets/login.jpg";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 
@@ -10,25 +10,25 @@ const Login = () => {
   const { signInUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const axiosPublic = useAxiosPublic();
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     const email = e.target.email.value;
     const password = e.target.password.value;
     const userCredentials = {
       email: email,
       password: password,
     };
-    // console.log(test)
 
     try {
       const res = await axiosPublic.post("/api/login", userCredentials);
-      // console.log(res.data);
 
-      // Assuming signInUser is a function that sets the user context
-      signInUser(res.data); // You might need to adjust this depending on what your backend returns and what signInUser expects
+      signInUser(res.data);
 
-      // This checks if login was successful; adjust according to your backend response structure
+      setIsLoading(false);
+
       if (res.data && res.data._id) {
         Swal.fire({
           position: "top",
@@ -40,8 +40,8 @@ const Login = () => {
         navigate("/");
       }
     } catch (error) {
+      setIsLoading(false);
       console.error("Login error:", error);
-      // Handle login failure, e.g., showing an error message
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -88,9 +88,13 @@ const Login = () => {
           </div>
           <div className="flex justify-center w-2/4 mx-auto mt-2 col-span-2">
             <button
+              disabled={isLoading}
               type="submit"
-              className="btn btn-ghost bg-white p-2 rounded-md w-full text-xl font-bold uppercase text-[#a9a3cf] hover:text-white"
+              className="btn btn-ghost bg-white p-2 rounded-md w-full text-xl font-bold uppercase text-[#a9a3cf] hover:text-white  flex gap-2 items-center disabled:text-white"
             >
+              {isLoading ? (
+                <span className="loading loading-spinner loading-md text-white"></span>
+              ) : null}
               Login
             </button>
           </div>

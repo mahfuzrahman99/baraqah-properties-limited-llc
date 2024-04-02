@@ -9,8 +9,14 @@ const AuthProvider = ({ children }) => {
 
   useEffect(()=>{
     const storedUser = localStorage.getItem("user");
-    setUser(storedUser ? JSON.parse(storedUser) : null)
-  }, [])
+    console.log(storedUser)
+    if(!storedUser){
+      setUser(JSON.parse(storedUser))
+    }
+    else{
+      setUser(null)
+    }
+  }, [isLoading])
 
   const signInUser = (userLoggedIn) => {
     setUser(userLoggedIn);

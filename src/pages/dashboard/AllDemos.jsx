@@ -7,12 +7,30 @@ import AllDemosToDisplay from "./AllDemosToDisplay";
 const AllDemos = () => {
   const [showModal, setShowModal] = useState(false);
   const [searchedDemo, setSearchedDemo] = useState();
-  const [demos, refetch] = useFetchDemos();
+  const [demos, refetch, isLoading] = useFetchDemos();
   // console.log(demos?.length)
-
   const demosToDisplay = searchedDemo || demos;
-  // const demosToDisplay = searchedDemo?.length ? searchedDemo : demos;
-  // console.log( typeof(demos))
+
+  let content = null;
+
+  if (isLoading) {
+    content = (
+      <div className="md:flex gap-4 max-w-5xl mx-auto h-[60vh]">
+        <div className="flex flex-col md:space-y-12 space-y-4 flex-1">
+          <div className="skeleton h-10 w-48"></div>
+          <div className="skeleton h-10 w-full"></div>
+          <div className="skeleton h-10 w-full"></div>
+          <div className="skeleton h-10 w-full"></div>
+          <div className="skeleton h-10 w-full"></div>
+        </div>
+      </div>
+    );
+  } else {
+    content = (
+      <AllDemosToDisplay refetch={refetch} demosToDisplay={demosToDisplay} />
+    );
+  }
+
   return (
     <>
       <div className="md:flex justify-between m-3 md:m-10">
@@ -29,9 +47,7 @@ const AllDemos = () => {
           <SearchDemo demos={demos} setSearchedDemo={setSearchedDemo} />
         </div>
       </div>
-      <div>
-        <AllDemosToDisplay refetch={refetch} demosToDisplay={demosToDisplay} />
-      </div>
+      {content}
     </>
   );
 };

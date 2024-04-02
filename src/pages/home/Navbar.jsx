@@ -91,7 +91,7 @@ const Navbar = () => {
   );
   const handleLogout = () => {
     logOut();
-    navigate("/api/login");
+    navigate("/login");
   };
 
   return (
