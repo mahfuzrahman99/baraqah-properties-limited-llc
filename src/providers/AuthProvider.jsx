@@ -8,16 +8,14 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
     // Browser reload korle local storage theke user info retrieve kora
     const storedUser = localStorage.getItem("user");
-    return storedUser ? JSON.parse(storedUser) : 
-    // {
-    //   // _id: "",
-    //   // name: "",
-    //   // email: "",
-    //   // password: "",
-    //   // photoURL: "",
-    //   // role: "",
-    // };
-    null
+    return storedUser ? JSON.parse(storedUser) : {
+      _id: "",
+      name: "",
+      email: "",
+      password: "",
+      photoURL: "",
+      role: "",
+    };
   });
 
   const signInUser = (userLoggedIn) => {
@@ -28,7 +26,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logOut = () => {
-    setUser(null);
+    setUser("");
     // Local storage e user info clear kora
     localStorage.removeItem("user");
   };

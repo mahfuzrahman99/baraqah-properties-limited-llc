@@ -9,7 +9,7 @@ const Navbar = () => {
   const superAdmin = useGetUserRole();
   const admin = superAdmin === "Super_Admin";
   const admin0 = superAdmin === "Admin";
-  console.log(user);
+  // console.log(admin, admin0);
   const navigate = useNavigate();
   const isDarkTheme = true;
 
