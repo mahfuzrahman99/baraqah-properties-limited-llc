@@ -45,6 +45,20 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
+          to="/api/login"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#311A36] hover:text-[#311A36] hover:font-bold underline font-bold"
+              : "font-bold hover:text-[#8A8B8C] hover:font-bold  text-[#8A8B8C]"
+          }
+        >
+          LOGIN
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
           to="/ourWorks"
           className={({ isActive, isPending }) =>
             isPending
@@ -57,7 +71,7 @@ const Navbar = () => {
           OUR WORKS
         </NavLink>
       </li>
-      {/* {admin || admin0 ? ( */}
+      {admin || admin0 ? (
         <li>
           <NavLink
             to="/owner_dashboard/allDemos"
@@ -72,7 +86,7 @@ const Navbar = () => {
             DASHBOARD
           </NavLink>
         </li>
-      {/* ) : null
+      ) : null
       // <li>
       //   <NavLink
       //     className={({ isActive, isPending }) =>
@@ -86,7 +100,7 @@ const Navbar = () => {
       //     DASHBOARD
       //   </NavLink>
       // </li>
-      } */}
+      }
     </>
   );
   const handleLogout = () => {
