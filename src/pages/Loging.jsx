@@ -5,12 +5,15 @@ import loginImg from "../assets/login.jpg";
 import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import { BsEye } from "react-icons/bs";
+import { BsEyeSlash } from "react-icons/bs";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const axiosPublic = useAxiosPublic();
   const [isLoading, setIsLoading] = useState(false);
+  const [show, setShow] = useState(true);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -71,11 +74,31 @@ const Login = () => {
             <input
               type="email"
               name="email"
-              className="p-2 rounded-md bg-white text-black"
+              className="p-2 rounded-md bg-white outline-none text-black"
               placeholder="Input your valid email here"
             />
           </div>
-          <div className="flex flex-col mt-2 col-span-2">
+          <div className="form-control relative col-span-2">
+            <div>
+              <label className="text-white">Password</label>
+              <input
+                type={!show ? "text" : "password"}
+                name="password"
+                placeholder="password"
+                className="p-2 outline-none rounded-md bg-[#F3F3F3] w-full"
+                required
+              />
+            </div>
+            <div className="absolute top-9 right-2">
+              <span
+                className="text-xl font-extrabold"
+                onClick={() => setShow(!show)}
+              >
+                {show ? <BsEye></BsEye> : <BsEyeSlash></BsEyeSlash>}
+              </span>
+            </div>
+          </div>
+          {/* <div className="flex flex-col mt-2 col-span-2">
             <label htmlFor="password" className="text-white">
               Password:
             </label>
@@ -85,7 +108,7 @@ const Login = () => {
               className="p-2 rounded-md bg-white text-black"
               placeholder="Input your password here"
             />
-          </div>
+          </div> */}
           <div className="flex justify-center w-2/4 mx-auto mt-2 col-span-2">
             <button
               disabled={isLoading}

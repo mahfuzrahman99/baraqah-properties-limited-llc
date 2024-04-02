@@ -15,7 +15,7 @@ const AllDemos = () => {
 
   if (isLoading) {
     content = (
-      <div className="md:flex gap-4 max-w-5xl mx-auto h-[60vh]">
+      <div className="md:flex gap-4 max-w-5xl mx-auto h-[65vh] md:h-[55vh]">
         <div className="flex flex-col md:space-y-12 space-y-4 flex-1">
           <div className="skeleton h-10 w-48"></div>
           <div className="skeleton h-10 w-full"></div>

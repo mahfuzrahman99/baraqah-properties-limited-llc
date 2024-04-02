@@ -19,14 +19,14 @@ const OurWorks = () => {
 
   if (isLoading) {
     content = (
-      <div className="md:flex gap-4 max-w-5xl mx-auto h-[60vh]">
-        <div className="skeleton h-full w-full flex-1"></div>
-        <div className="flex flex-col md:space-y-12 space-y-4 flex-1">
-          <div className="skeleton h-10 w-28"></div>
-          <div className="skeleton h-10 w-full"></div>
-          <div className="skeleton h-10 w-full"></div>
-          <div className="skeleton h-10 w-full"></div>
-          <div className="skeleton h-10 w-full"></div>
+      <div className="md:flex gap-4 max-w-5xl mx-auto h-[65vh] md:h-[55vh]">
+        <div className="skeleton h-[30vh] md:h-full w-full flex-1 mt-3 md:mt-0"></div>
+        <div className="flex flex-col md:space-y-12 space-y-4 flex-1 mt-3 md:mt-0">
+          <div className="skeleton h-3 md:h-10 w-16 md:w-28"></div>
+          <div className="skeleton h-3 md:h-10 md:w-full"></div>
+          <div className="skeleton h-3 md:h-10 md:w-full"></div>
+          <div className="skeleton h-3 md:h-10 md:w-full"></div>
+          <div className="skeleton h-3 md:h-10 md:w-full"></div>
         </div>
       </div>
     );

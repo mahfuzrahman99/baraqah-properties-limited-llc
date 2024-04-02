@@ -8,11 +8,13 @@ import Login from "../pages/Loging";
 import AllDemos from "../pages/dashboard/AllDemos";
 import AllUsers from "../pages/dashboard/AllUsers";
 import OwnerDashboard from "../pages/dashboard/OwnerDashboard";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",

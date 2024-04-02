@@ -8,7 +8,6 @@ const useFetchUsers = () => {
     queryKey: ["users"],
     queryFn: async () => {
       const res = await axiosPublic.get("/api/users");
-      console.log(res.data)
       return res.data;
     },
   });
