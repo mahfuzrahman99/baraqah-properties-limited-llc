@@ -7,16 +7,10 @@ const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState(null);
 
-  useEffect(()=>{
-    const storedUser = localStorage.getItem("user");
-    console.log(storedUser)
-    if(!storedUser){
-      setUser(JSON.parse(storedUser))
-    }
-    else{
-      setUser(null)
-    }
-  }, [isLoading])
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    setUser(storedUser)
+  }, [])
 
   const signInUser = (userLoggedIn) => {
     setUser(userLoggedIn);
@@ -31,12 +25,6 @@ const AuthProvider = ({ children }) => {
     localStorage.clear("user");
   };
 
-  // useEffect hook use kora hoise user er state change track korar jonno
-  useEffect(() => {
-    // Local storage e user info store kora
-    localStorage.setItem("user", JSON.stringify(user));
-  }, [user]);
-  // console.log(user);
   const authInfo = {
     user,
     signInUser,
