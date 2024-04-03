@@ -57,8 +57,7 @@ const Navbar = () => {
           OUR WORKS
         </NavLink>
       </li>
-      {admin || admin0 ? (
-        <li>
+      <li>
           <NavLink
             to="/owner_dashboard/allDemos"
             className={({ isActive, isPending }) =>
@@ -72,21 +71,6 @@ const Navbar = () => {
             DASHBOARD
           </NavLink>
         </li>
-      ) : null
-      // <li>
-      //   <NavLink
-      //     className={({ isActive, isPending }) =>
-      //       isPending
-      //         ? "pending"
-      //         : isActive
-      //         ? "font-bold hover:text-[#8A8B8C] hover:font-bold  text-[#8A8B8C]"
-      //         : "font-bold hover:text-[#8A8B8C] hover:font-bold  text-[#8A8B8C]"
-      //     }
-      //   >
-      //     DASHBOARD
-      //   </NavLink>
-      // </li>
-      }
     </>
   );
   const handleLogout = () => {

@@ -29,8 +29,7 @@ const OwnerDashboard = () => {
                     ALL DEMOS
                   </NavLink>
                 </li>
-                {isSuperAdmin === "Super_Admin" ? (
-                  <li>
+                <li>
                     <NavLink
                       to="/owner_Dashboard/allUsers"
                       className={({ isActive, isPending }) =>
@@ -44,9 +43,6 @@ const OwnerDashboard = () => {
                       ALL USERS
                     </NavLink>
                   </li>
-                ) : (
-                  ""
-                )}
                 <div className="divider"></div>
                 <li>
                   <Link
