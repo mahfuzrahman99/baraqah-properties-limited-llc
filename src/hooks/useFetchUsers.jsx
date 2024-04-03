@@ -10,6 +10,7 @@ const useFetchUsers = () => {
       const res = await axiosPublic.get("/api/users");
       return res.data;
     },
+    staleTime: 6000 * 1000,
   });
 
   return [users, refetch];
