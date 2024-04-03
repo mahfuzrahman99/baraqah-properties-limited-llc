@@ -78,7 +78,7 @@ const OwnerDashboard = () => {
           <ul className="">
             {/* Sidebar content here */}
             <div className="w-50 min-h-screen md:hidden bg-[#a9a3cf]">
-              <ul className="menu p-4">
+            <ul className="menu p-4">
                 <li>
                   <NavLink
                     to="/owner_Dashboard/allDemos"
@@ -86,27 +86,39 @@ const OwnerDashboard = () => {
                       isPending
                         ? "pending"
                         : isActive
-                        ? "text-[#311A36] hover:text-[ff4a4a] hover:font-bold underline font-bold"
+                        ? "text-[#311A36] hover:text-[#190b1c] hover:font-bold font-bold "
                         : "font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
                     }
                   >
-                    ALL Projects
+                    ALL DEMOS
                   </NavLink>
                 </li>
+                {isSuperAdmin === "Super_Admin" ? (
+                  <li>
+                    <NavLink
+                      to="/owner_Dashboard/allUsers"
+                      className={({ isActive, isPending }) =>
+                        isPending
+                          ? "pending"
+                          : isActive
+                          ? "text-[#311A36] hover:text-[#190b1c] hover:font-bold font-bold "
+                          : "font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
+                      }
+                    >
+                      ALL USERS
+                    </NavLink>
+                  </li>
+                ) : (
+                  ""
+                )}
                 <div className="divider"></div>
                 <li>
-                  <NavLink
+                  <Link
                     to="/"
-                    className={({ isActive, isPending }) =>
-                      isPending
-                        ? "pending"
-                        : isActive
-                        ? "text-[#311A36] hover:text-[ff4a4a] hover:font-bold underline font-bold"
-                        : "font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
-                    }
+                    className="font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
                   >
                     HOME
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </div>
