@@ -41,7 +41,7 @@ const Register = ({ showModal, setShowModal }) => {
           }
         });
       } else {
-        Swal(
+        Swal.fire(
           "Error",
           "Your Password Must Be 6 character or longer and have atleast a uppercase and a spacial character",
           "error"
