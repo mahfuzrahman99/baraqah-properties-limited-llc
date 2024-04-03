@@ -7,7 +7,7 @@ const AllDemosToDisplay = ({ demosToDisplay, refetch }) => {
   // console.log( demosToDisplay );
   // console.log( typeof(demosToDisplay) );
   return (
-    <div className="max-w-5xl mx-auto w-[300px] md:w-auto">
+    <div className="max-w-5xl mx-auto w-[95vw] md:w-auto h-[80vh]">
       <div className="bg-gray-100 md:p-4 py-4 md:py-0">
         <h1 className="text-xl md:text-3xl mb-2 font-bold bg-gradient-to-r from-indigo-500 via-[#3a3271] to-[#E91E63] bg-clip-text text-transparent">
           Total Demos: {demosToDisplay?.length}
