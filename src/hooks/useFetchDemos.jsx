@@ -10,6 +10,7 @@ const useFetchDemos = () => {
       const res = await axiosPublic.get("/api/demos");
       return res.data;
     },
+    staleTime: 6000 * 1000,
   });
 
   return [demos, refetch, isLoading];
