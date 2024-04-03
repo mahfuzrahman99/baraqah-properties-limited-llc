@@ -45,7 +45,7 @@ const AllUsers = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto w-[95vw] md:w-auto h-[69vh]">
+    <div className="max-w-5xl mx-auto w-[95vw] md:w-auto h-[80vh]">
       <div className="mt-5 md:mt-20">
         <button
           onClick={() => setShowModal(true)}
