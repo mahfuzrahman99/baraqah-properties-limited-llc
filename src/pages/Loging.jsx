@@ -26,7 +26,7 @@ const Login = () => {
     };
 
     try {
-      const res = await axiosPublic.post("/login", userCredentials);
+      const res = await axiosPublic.post("/api/login", userCredentials);
 
       signInUser(res.data);
 
