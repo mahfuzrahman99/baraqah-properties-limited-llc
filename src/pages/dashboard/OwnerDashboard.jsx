@@ -41,7 +41,7 @@ const OwnerDashboard = () => {
                   </NavLink>
                 </li>
                 {isSuperAdmin === "Super_Admin" ? (
-                  
+
                   <li>
                     <NavLink
                       to="/owner_Dashboard/allUsers"
@@ -51,7 +51,7 @@ const OwnerDashboard = () => {
                           : isActive
                           ? "text-[#311A36] hover:text-[#190b1c] hover:font-bold font-bold "
                           : "font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
-                      }
+                      } 
                     >
                       ALL USERS
                     </NavLink>
