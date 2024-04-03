@@ -61,7 +61,7 @@ const AllUsers = () => {
             Total Users: {users.length}
           </h1>
           <div
-            className=" overflow-x-auto h-[60vh] md:h-[65vh] overflow-y-auto"
+            className=" overflow-x-auto h-[60vh] md:h-[69vh] overflow-y-auto"
             style={{
               scrollbarWidth: "thin",
               scrollbarColor: "#a9a3cf #f1f1f1",
