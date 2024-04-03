@@ -1,15 +1,26 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 import useGetUserRole from "../../hooks/useGetUserRole";
+import { useState } from "react"; // Import useState hook
 
 const OwnerDashboard = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false); // State to manage drawer open/close
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen); // Toggle drawer state
+  };
 
   const isSuperAdmin = useGetUserRole();
   console.log(isSuperAdmin);
-  
+
+  // Function to close drawer
+  const closeDrawer = () => {
+    setIsDrawerOpen(false);
+  };
+
   return (
     <div>
       <div className="drawer">
-        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <input id="my-drawer" type="checkbox" className="drawer-toggle" checked={isDrawerOpen} onChange={toggleDrawer} />
         <div className="drawer-content">
           {/* Page content here */}
           <div className="flex justify-between">
@@ -52,6 +63,7 @@ const OwnerDashboard = () => {
                   <Link
                     to="/"
                     className="font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
+                    onClick={closeDrawer} // Close drawer when link is clicked
                   >
                     HOME
                   </Link>
@@ -69,7 +81,7 @@ const OwnerDashboard = () => {
             OPEN DRAWER
           </label>
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side" onClick={closeDrawer}>
           <label
             htmlFor="my-drawer"
             aria-label="close sidebar"
@@ -78,7 +90,7 @@ const OwnerDashboard = () => {
           <ul className="">
             {/* Sidebar content here */}
             <div className="w-50 min-h-screen md:hidden bg-[#a9a3cf]">
-            <ul className="menu p-4">
+              <ul className="menu p-4">
                 <li>
                   <NavLink
                     to="/owner_Dashboard/allDemos"
@@ -116,6 +128,7 @@ const OwnerDashboard = () => {
                   <Link
                     to="/"
                     className="font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
+                    onClick={closeDrawer} // Close drawer when link is clicked
                   >
                     HOME
                   </Link>

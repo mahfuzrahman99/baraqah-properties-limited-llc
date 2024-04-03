@@ -122,6 +122,7 @@ const Register = ({ showModal, setShowModal }) => {
                 </div>
                 <div className="w-[100px] mx-auto bg-[#0B0633] rounded col-span-2 mt-2">
                   <button
+                    onClick={() => setShowModal(false)}
                     type="submit"
                     className=" bg-gradient-to-r from-indigo-500 via-[#3a3271] to-pink-500 bg-clip-text text-transparent transform duration-1000 font-bold py-2 px-4 rounded "
                   >
